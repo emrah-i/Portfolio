@@ -52,10 +52,18 @@ nav svg {
     transform: scale(1.25);
 }
 
+#about_link:hover {
+    cursor: pointer;
+}
+
 #dark_mode_info {
     margin-top: 4rem;
     display: flex;
     justify-content: center;
+}
+
+#name_link:hover {
+    cursor: pointer;
 }
 
 nav a {
@@ -246,7 +254,7 @@ button.resume:hover {
 }
 
 .about > div {
-    margin: 7rem auto;
+    margin: 2rem auto;
     width: 100%;
 }
 
@@ -259,6 +267,14 @@ button.resume:hover {
     color: var(--main-color);
     font-size: 1.25rem;
     font-weight: 500;
+}
+
+#about_section {
+    margin: 0 auto;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 #contact_section {
@@ -335,7 +351,7 @@ button.resume:hover {
     margin-left: -60px;
 }
 
-.contact-info > span:hover .tooltiptext{
+.contact-info > span:hover .tooltiptext {
     visibility: visible;
 }
 
@@ -421,7 +437,7 @@ button.resume:hover {
 }
 
 .projects {
-    margin: 10rem auto 7rem;
+    margin: 7rem auto 5rem;
 }
 
 .projects h1 {
@@ -568,15 +584,21 @@ text {
     align-items: center;
 }
 
-@media (max-width: 576px) {
+@media (min-width: 992px) {
     html {
-        font-size: 10px; 
+        font-size: 18px; 
+    }
+}
+
+@media (max-width: 992px) {
+    html {
+        font-size: 16px; 
     }
 }
 
 @media (max-width: 768px) {
     html {
-        font-size: 12px; 
+        font-size: 14px; 
     }
     .second_col { 
         margin-top: 2rem;
@@ -589,14 +611,8 @@ text {
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
     html {
-        font-size: 14px; 
-    }
-}
-
-@media (min-width: 992px) {
-    html {
-        font-size: 16px; 
+        font-size: 12px; 
     }
 }
