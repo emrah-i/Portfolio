@@ -116,7 +116,7 @@ body {
 }
 
 .main_full {
-    margin-top: 5rem;
+    margin-top: 3rem;
     gap: 1rem;
 }
 
@@ -614,5 +614,11 @@ text {
 @media (max-width: 576px) {
     html {
         font-size: 12px; 
+    }
+}
+
+@media (max-width: 400px) {
+    .resume {
+        margin-top: .5rem;
     }
 }
