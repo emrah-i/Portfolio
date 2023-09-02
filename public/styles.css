@@ -1,7 +1,7 @@
 :root {
     --main-color: #FBF7F2;
     --second-color: #F05454;
-  }
+}
 
 .nav-bar {
     position: fixed;
@@ -445,20 +445,6 @@ a:hover {
     font-size: 3rem;
     width: fit-content;
     font-weight: 700;
-}
-
-.projects h1::before {
-    content: "";
-    position: absolute;
-    height: .4rem;
-    background-color: var(--main-color);
-    bottom: 0;
-    width: 0%;
-    transition: width .3s ease-in-out;
-}
-
-.projects h1:hover::before {
-    width: 100%;
 }
 
 .projects a {
