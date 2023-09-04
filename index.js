@@ -6,6 +6,7 @@ import nodemailer from 'nodemailer';
 import path, { dirname }  from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from "dotenv";
+import axios from 'axios'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -39,7 +40,7 @@ app.get('/', async (req, res) => {
         let numb = Math.floor(Math.random() * quotes.length)
         let quote = quotes[numb];
         
-        res.render('index.ejs', {author: quote.author, quote: quote.quote})
+        res.render('index.ejs', {author: quote.author, quote: quote.quote, site_key: process.env.RC_SITE_KEY})
     });
 })
 
@@ -48,7 +49,7 @@ app.post('/email', async (req, res) => {
     const email_input = req.body.email
     const subject_input = req.body.subject
     const body_input = req.body.body
-
+    
     const mailOptions = {
         from: process.env.SMTP_EMAIL,
         to: process.env.SMTP_EMAIL,
@@ -57,14 +58,14 @@ app.post('/email', async (req, res) => {
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
-          console.log('Error sending email: ' + error);
-          res.redirect('/');
+            console.log('Error sending email: ' + error);
+            res.redirect('/');
         } else {
-          console.log('Email sent: ' + info.response);
-          res.redirect('/');
+            console.log('Email sent: ' + info.response);
+            res.redirect('/');
         }
     });
-})
+});
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}.`);

@@ -303,7 +303,7 @@ a:hover {
 }
 
 #contact_section .btn:hover {
-    margin: 0 !important;
+    margin: .5rem auto !important;
     border-radius: 20px;
 }
 
