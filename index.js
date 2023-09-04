@@ -53,7 +53,7 @@ app.post('/email', async (req, res) => {
         from: process.env.SMTP_EMAIL,
         to: process.env.SMTP_EMAIL,
         subject: subject_input,
-        text: `${name_input} sent you the following email: \n\n ${body_input} \n\n They can be contacted at ${email_input}.`
+        text: `${name_input} sent you the following email:\n\n${body_input}\n\nThey can be contacted at ${email_input}.`
     };
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
