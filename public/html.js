@@ -1,14 +1,3 @@
-
-const q_ch = document.querySelector('#quote_chevron');
-const a_link = document.querySelector('#about_link');
-const p_link = document.querySelector('#projects_link');
-const resume_button = document.querySelector('button.resume');
-const chars = document.querySelector('#chars');
-const name_link = document.querySelector('#name_link');
-const email = document.querySelector('#personal_email');
-const phone = document.querySelector('#personal_phone');
-const about_element = document.querySelector('.about');
-const quote = document.querySelector('.quote')
 const lightColor = '#FBF7F2';
 const darkColor = '#212F3C';
 const eye = document.querySelector('#eye')
@@ -24,30 +13,62 @@ if (window.localStorage.getItem('color')) {
     }
 }
 
-q_ch.addEventListener('click', ()=>{
-    quote.scrollIntoView({block: "center", behavior: 'smooth'})
+document.querySelector('.github-btn').addEventListener('click', ()=>{
+    window.open('https://github.com/emrah-i', '_blank');
 })
 
-a_link.addEventListener('click', ()=>{
-    about_element.scrollIntoView({block: "start", behavior: 'smooth'})
+document.querySelector('.linkedin-btn').addEventListener('click', ()=>{
+    window.open('https://linkedin.com/in/emrakh-i', '_blank');
 })
 
-p_link.addEventListener('click', ()=>{
+document.querySelector('#project1 .project_buttons .project').addEventListener('click', ()=>{
+    window.open('https://network.applikuapp.com', '_blank');
+})
+
+document.querySelector('#project1 .project_buttons .source').addEventListener('click', ()=>{
+    window.open('https://github.com/emrah-i/Network', '_blank');
+})
+
+document.querySelector('#project2 .project_buttons .project').addEventListener('click', ()=>{
+    window.open('https://eblog.applikuapp.com', '_blank');
+})
+
+document.querySelector('#project2 .project_buttons .source').addEventListener('click', ()=>{
+    window.open('https://github.com/emrah-i/Blog', '_blank');
+})
+
+document.querySelector('#project3 .project_buttons .project').addEventListener('click', ()=>{
+    window.open('https://inventory.applikuapp.com', '_blank');
+})
+
+document.querySelector('#project3 .project_buttons .source').addEventListener('click', ()=>{
+    window.open('https://github.com/emrah-i/Inventory', '_blank');
+})
+
+document.querySelector('#quote_chevron').addEventListener('click', ()=>{
+    document.querySelector('.quote').scrollIntoView({block: "center", behavior: 'smooth'})
+})
+
+document.querySelector('#about_link').addEventListener('click', ()=>{
+    document.querySelector('.about').scrollIntoView({block: "start", behavior: 'smooth'})
+})
+
+document.querySelector('#projects_link').addEventListener('click', ()=>{
     document.querySelector('#project1').scrollIntoView({block: 'start'});
 })
 
-name_link.addEventListener('click', ()=>{
+document.querySelector('#name_link').addEventListener('click', ()=>{
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 })
 
-resume_button.addEventListener('click', ()=>{
+document.querySelector('button.resume').addEventListener('click', ()=>{
     window.open('https://www.docdroid.net/WyjIuyO/fake-resume-pdf', 'Resume')
 })
 
 
 document.querySelector('#contact_section textarea').addEventListener('input', (event)=>{
-    let char_count = chars.querySelector('#char_count');
+    let char_count = document.querySelector('#char_count');
     let current = event.target.value.length;
 
     char_count.innerHTML = current;
@@ -55,7 +76,7 @@ document.querySelector('#contact_section textarea').addEventListener('input', (e
 
 const email_info = document.querySelector('#personal_email .tooltiptext')
 document.querySelector('.email-btn').addEventListener('click', ()=> {
-    email.scrollIntoView({block: 'center'});
+    document.querySelector('#personal_email').scrollIntoView({block: 'center'});
 });
 
 document.querySelector('#personal_email > span').addEventListener('click', ()=> {
@@ -68,7 +89,7 @@ document.querySelector('#personal_email > span').addEventListener('click', ()=> 
 
 const phone_info =  document.querySelector('#personal_phone .tooltiptext')
 document.querySelector('.phone-btn').addEventListener('click', ()=> {
-    phone.scrollIntoView({block: 'center'});
+    document.querySelector('#personal_phone').scrollIntoView({block: 'center'});
 });
 
 document.querySelector('#personal_phone > span').addEventListener('click', ()=> {

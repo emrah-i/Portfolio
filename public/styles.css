@@ -601,6 +601,9 @@ text {
     html {
         font-size: 12px; 
     }
+    nav a {
+        font-size: 1.4rem !important;
+    }
 }
 
 @media (max-width: 400px) {
