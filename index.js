@@ -44,10 +44,10 @@ app.get('/', async (req, res) => {
 })
 
 app.post('/email', async (req, res) => {
-    name_input = req.body.name
-    email_input = req.body.email
-    subject_input = req.body.subject
-    body_input = req.body.body
+    const name_input = req.body.name
+    const email_input = req.body.email
+    const subject_input = req.body.subject
+    const body_input = req.body.body
 
     const mailOptions = {
         from: process.env.SMTP_EMAIL,
