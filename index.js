@@ -6,7 +6,6 @@ import nodemailer from 'nodemailer';
 import path, { dirname }  from 'path';
 import { fileURLToPath } from 'url';
 import dotenv from "dotenv";
-import axios from 'axios'
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -40,7 +39,7 @@ app.get('/', async (req, res) => {
         let numb = Math.floor(Math.random() * quotes.length)
         let quote = quotes[numb];
         
-        res.render('index.ejs', {author: quote.author, quote: quote.quote, site_key: process.env.RC_SITE_KEY})
+        res.render('index.ejs', {author: quote.author, quote: quote.quote})
     });
 })
 
