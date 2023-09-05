@@ -100,12 +100,8 @@ nav a {
     left: 50%; 
     transform: translate(-50%, 0);
     margin-top: 1rem;
-    padding: 2rem 0 1rem;
+    padding: 1rem 0 0;
     margin-bottom: 0;
-}
-
-main {
-    margin-bottom: 2rem;
 }
 
 body {
@@ -443,6 +439,25 @@ a:hover {
 
 .projects {
     margin: 7rem auto 5rem;
+}
+
+.projects .img {
+    display: flex;
+    justify-content: center;
+}
+
+.projects img {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border-radius: .5rem;
+    transition: all .6s ease-in-out;
+}
+
+.projects img:hover {
+    left: 50%;
+    transform: scale(2.5) translateX(-23.65%) translateY(35%);
+    box-shadow: 0 0 1rem 1rem #00000020;
 }
 
 .projects h1 {
