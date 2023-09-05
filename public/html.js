@@ -50,11 +50,7 @@ document.querySelector('#quote_chevron').addEventListener('click', ()=>{
 })
 
 document.querySelector('#about_link').addEventListener('click', ()=>{
-    document.querySelector('.about').scrollIntoView({block: "start", behavior: 'smooth'})
-})
-
-document.querySelector('#projects_link').addEventListener('click', ()=>{
-    document.querySelector('#project1').scrollIntoView({block: 'start'});
+    document.querySelector('#about_section').scrollIntoView({block: "center", behavior: 'smooth'})
 })
 
 document.querySelector('#name_link').addEventListener('click', ()=>{
