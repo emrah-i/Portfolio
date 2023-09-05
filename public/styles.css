@@ -463,6 +463,11 @@ a:hover {
     box-shadow: 0 0 1rem 1rem #00000020;
 }
 
+#smaller_projects img {
+    border-radius: 0;
+    transform: none;
+}
+
 .projects h1 {
     position: relative;
     font-size: 3rem;
