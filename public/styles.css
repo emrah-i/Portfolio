@@ -263,7 +263,6 @@ button.resume:hover {
     background-color: var(--second-color);
     width: 100%;
     margin: auto 0;
-    border-radius: 20px;
     padding: 1.5rem 2rem 2rem;
     color: var(--main-color);
     font-size: 1.25rem;
@@ -271,6 +270,8 @@ button.resume:hover {
 }
 
 #about_section {
+    border: .25rem solid var(--second-color);
+    border-radius: 1rem;
     margin: 0 auto;
 }
 
@@ -279,9 +280,11 @@ a:hover {
 }
 
 #contact_section {
+    border: .25rem solid var(--second-color);
+    border-radius: 1rem;
     width: 100%;
     padding: 1rem;
-    margin: 5rem 0 10rem;
+    margin: 3rem 0 10rem;
     font-size: 1.5rem;
     font-weight: 600;
 }
@@ -438,7 +441,7 @@ a:hover {
 }
 
 .projects {
-    margin: 7rem auto 5rem;
+    margin: 7rem auto 3rem;
 }
 
 .projects .img {
