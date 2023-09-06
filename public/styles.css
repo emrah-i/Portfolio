@@ -450,16 +450,21 @@ a:hover {
 }
 
 .projects img {
+    cursor: pointer;
     width: 100%;
     height: auto;
     text-align: center;
-    border-radius: .5rem;
-    transition: all .6s ease-in-out;
+    border-radius: .5rem !important;
 }
 
-.projects img:hover {
+.projects .carousel {
+    border-radius: .5rem !important;
+    transition: all .5s ease-in-out;
+}
+
+.enlarged {
     left: 50%;
-    transform: scale(2.5) translateX(-23.65%) translateY(35%);
+    transform: scale(2.25) translateX(-45.5%) translateY(35%);
     box-shadow: 0 0 1rem 1rem #00000020;
 }
 
@@ -598,9 +603,14 @@ text {
     align-items: center;
 }
 
-@media (min-width: 992px) {
+@media (max-width: 1400px){
     html {
         font-size: 18px; 
+    }
+    .enlarged {
+        left: 50%;
+        transform: scale(2.5) translateX(-24%) translateY(35%);
+        box-shadow: 0 0 1rem 1rem #00000020;
     }
 }
 
@@ -613,6 +623,11 @@ text {
 @media (max-width: 768px) {
     html {
         font-size: 14px; 
+    }
+    .enlarged {
+        left: 50%;
+        transform: scale(1.5) translateY(35%);
+        box-shadow: 0 0 1rem 1rem #00000020;
     }
     .second_col { 
         margin-top: 2rem;

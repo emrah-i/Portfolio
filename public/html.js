@@ -118,3 +118,29 @@ eye.addEventListener('click', (event)=> {
         eye.dataset.color = 'light';
     };
 })
+
+document.querySelectorAll('.projects .carousel').forEach(element=>{
+    element.addEventListener('click', (event)=>{
+        event.target.closest('.carousel').classList.add('enlarged')
+
+        if (document.querySelector('.enlarged')) {
+            document.addEventListener('click', (event)=>{
+                if (hasCarouselAncestor(event.target) === false) {
+                    document.querySelectorAll('.projects .carousel').forEach(element=>{
+                        element.classList.remove('enlarged');
+                    })
+                }
+            })
+        }
+    })
+})
+
+function hasCarouselAncestor(element) {
+    while (element) {
+      if (element.classList.contains("carousel")) {
+        return true;
+      }
+      element = element.parentElement;
+    }
+    return false;
+}
