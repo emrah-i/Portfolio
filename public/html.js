@@ -142,7 +142,6 @@ eye.addEventListener('click', (event)=> {
     }
     else {
         color = event.target.closest('#eye').dataset.color
-        console.log(color)
     };
 
     if (color === 'light') {
@@ -185,8 +184,6 @@ document.querySelector('#email_req').addEventListener('submit', async (event)=>{
     formData.forEach((value, key) => {
         requestBody[key] = value;
     });
-
-    console.log(JSON.stringify(requestBody))
 
     const response = await fetch('/email', {
         method: 'POST',
