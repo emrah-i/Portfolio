@@ -102,6 +102,7 @@ nav a {
     margin-top: 1rem;
     padding: 1rem 0 0;
     margin-bottom: 0;
+    z-index: 999;
 }
 
 body {
@@ -608,9 +609,13 @@ text {
         font-size: 18px; 
     }
     .enlarged {
-        left: 50%;
-        transform: scale(2.5) translateX(-24%) translateY(35%);
-        box-shadow: 0 0 1rem 1rem #00000020;
+        transform: scale(2.25) translateX(-42.5%) translateY(40%);
+    }
+}
+
+@media (max-width: 1200px){
+    .enlarged {
+        transform: scale(2.5) translateX(-42.5%) translateY(40%);
     }
 }
 
@@ -625,9 +630,7 @@ text {
         font-size: 14px; 
     }
     .enlarged {
-        left: 50%;
-        transform: scale(1.5) translateY(35%);
-        box-shadow: 0 0 1rem 1rem #00000020;
+        transform: scale(1.5) translateX(-35%) translateY(35%);
     }
     .second_col { 
         margin-top: 2rem;
