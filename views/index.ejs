@@ -501,7 +501,7 @@
                 <h1>Contact Me</h1>
                 <p class="contact-info" id="personal_phone">Through my cellphone at <span>240-520-8934.<span class="tooltiptext">Click to copy!</span></span></p>
                 <p class="contact-info" id="personal_email">Through my email at <span>ibraem1026@gmail.com<span class="tooltiptext">Click to copy!</span></span> or through the following form:</p>
-                <form action="/email" method="post">
+                <form action="/email" method="post" id="email_req">
                     <label>Name:</label>
                     <input type="text" class="form-control" name="name" placeholder="Your Name" required>
                     <label>Email:</label>
@@ -511,10 +511,14 @@
                     <label>Body:</label><br>
                     <textarea class="form-control" name="body" maxlength="320" placeholder="Email Body" required></textarea>
                     <p id="chars">Characters: <span id=char_count>0</span> / 320</p>
-                    <button type="submit" class="btn btn-lg">Send Email</button>
+                    <div class="g-recaptcha" data-sitekey="6LeSfvknAAAAAGKNBPG9aL7H4aV5twaZI3w1IMBu"></div>
+                    <button type="submit" class="btn btn-lg mt-3">Send Email</button>
                 </form>
             </div>
         </div>
+    </div>
+    <div id="popup">
+      <p id="popup_text"></p>
     </div>
 </main>
 <%- include("partials/footer.ejs") %>

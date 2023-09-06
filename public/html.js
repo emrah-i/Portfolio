@@ -173,6 +173,58 @@ document.querySelectorAll('.projects .carousel').forEach(element=>{
     })
 })
 
+document.querySelector('#email_req').addEventListener('submit', async (event)=>{
+    event.preventDefault()
+
+    form = document.querySelector('#email_req')
+
+    const formData = new FormData(form)
+
+    const requestBody = {};
+
+    formData.forEach((value, key) => {
+        requestBody[key] = value;
+    });
+
+    console.log(JSON.stringify(requestBody))
+
+    const response = await fetch('/email', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
+    })
+    const data = await response.json();
+    if (data.success) {
+        showPopup('Success');
+        form.reset()
+        grecaptcha.reset();
+    } else {
+        showPopup(data.message);
+        grecaptcha.reset();
+    }
+})
+
+function showPopup(message) {
+    
+    const popup = document.querySelector('#popup')
+    const popupText = document.querySelector('#popup_text')
+
+    popup.style.display = 'flex'
+    popupText.innerHTML = message
+
+    setTimeout(()=>{
+        popup.style.opacity = 1
+    }, 100)
+    setTimeout(()=>{
+        popup.style.opacity = 0
+    }, 1500)
+    setTimeout(()=>{
+        popup.style.display = 'none'
+    }, 1800)
+}
+
 function hasCarouselAncestor(element) {
     while (element) {
       if (element.classList.contains("carousel")) {
