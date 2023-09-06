@@ -45,6 +45,44 @@ document.querySelector('#project3 .project_buttons .source').addEventListener('c
     window.open('https://github.com/emrah-i/Inventory', '_blank');
 })
 
+document.querySelector('#bookshelf-view').addEventListener('click', ()=>{
+    window.open('https://bookshelf.applikuapp.com', '_blank');
+})
+
+document.querySelector('#bookshelf-source').addEventListener('click', ()=>{
+    window.open('https://github.com/emrah-i/Bookshelf', '_blank');
+})
+
+document.querySelector('#movies-view').addEventListener('click', ()=>{
+    window.open('https://movies.applikuapp.com', '_blank');
+})
+
+document.querySelector('#movies-source').addEventListener('click', ()=>{
+    window.open('https://github.com/emrah-i/MoviesList', '_blank');
+})
+
+document.querySelector('#pomodoro-view').addEventListener('click', ()=>{
+    window.open('https://replit.com/@emrah-i/Pomodoro', '_blank');
+})
+
+document.querySelector('#flashcards-view').addEventListener('click', ()=>{
+    window.open('https://replit.com/@emrah-i/Flashcards', '_blank');
+})
+
+document.querySelector('#pong-view').addEventListener('click', ()=>{
+    window.open('https://replit.com/@emrah-i/Pong', '_blank');
+})
+
+document.querySelector('#snake-view').addEventListener('click', ()=>{
+    window.open('https://replit.com/@emrah-i/Snake', '_blank');
+})
+
+document.querySelectorAll('.smaller-source').forEach(element=>{
+    element.addEventListener('click', ()=>{
+        window.open('https://github.com/emrah-i/Smaller-Projects', '_blank');
+    })    
+})
+
 document.querySelector('#quote_chevron').addEventListener('click', ()=>{
     document.querySelector('.quote').scrollIntoView({block: "center", behavior: 'smooth'})
 })
