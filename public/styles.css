@@ -458,9 +458,33 @@ a:hover {
     border-radius: .5rem !important;
 }
 
-.projects .carousel {
+.carousel {
+    position: relative;
     border-radius: .5rem !important;
     transition: all .5s ease-in-out;
+}
+
+.carousel:not(.enlarged):hover .tip {
+    display: block;
+}
+
+.tip {
+    position: absolute;
+    display: none;
+    left: 50%;
+    top: -15.5%;
+    transform: translateX(-50%);
+    min-width: 3rem;
+    width: fit-content;
+    background-color: #000000AF;
+    color: white;
+    padding: .75rem;
+    border-radius: 1rem;
+    z-index: 10000;
+}
+
+.tiptext {
+    margin: 0;
 }
 
 .enlarged {
