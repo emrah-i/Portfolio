@@ -498,6 +498,10 @@ a:hover {
     transform: none;
 }
 
+#smaller_projects img:hover {
+    cursor: default;
+}
+
 .projects h1 {
     position: relative;
     font-size: 3rem;
