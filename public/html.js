@@ -97,7 +97,7 @@ document.querySelector('#name_link').addEventListener('click', ()=>{
 })
 
 document.querySelector('button.resume').addEventListener('click', ()=>{
-    window.open('https://www.docdroid.net/WyjIuyO/fake-resume-pdf', 'Resume')
+    window.open('https://docs.google.com/document/d/1SRdj4tOmuf4HGfwwXJL6o8mINn5DJZ0l/edit', 'Resume')
 })
 
 
