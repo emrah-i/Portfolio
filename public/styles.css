@@ -555,10 +555,6 @@ a:hover {
     transform: scale(1.7);
 }
 
-.second_col .img {
-    width: 90%;
-}
-
 #project1, #project3, #smaller_projects {
     color:var(--main-color);
     background-color: var(--second-color);
