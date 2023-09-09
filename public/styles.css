@@ -698,6 +698,9 @@ text {
     nav a {
         font-size: 1.4rem !important;
     }
+    .enlarged {
+        transform: scale(1.2) translateX(-41.5%) translateY(35%);
+    }
 }
 
 @media (max-width: 400px) {
