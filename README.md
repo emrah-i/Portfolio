@@ -1,21 +1,28 @@
-**Portfolio Website (S3 + Route 53 + ACM + Terraform)**
+## Portfolio Website (AWS + Terraform)
 
-A fast, secure, and low-cost personal portfolio website deployed on AWS using S3 (static hosting), Route 53 (DNS), ACM (TLS/SSL), and Terraform (IaC).
+### Description
 
-[https://emrakh.com](https://s3.us-east-1.amazonaws.com/emrakh.com/index.html)
+A fast, secure, and low-cost personal portfolio website deployed using AWS and Terraform. Please go through the repo and ask me any questions you may have about why I used a specific service or what I would have done differently. 
 
-Note: DNS record propgration takes anywhere from 24-48 hours. If the records haven't propogated, the correct ACM records may not be in place yet.
+Portfolio: [https://emrakh.com](https:/emrakh.com)
+<!-- Blog post explaining technology used:  -->
 
-**Features**
+### Used Technology
 
-Static site hosting on Amazon S3
+#### Cloud:
+* AWS:
+  * ACM
+  * API Gateway
+  * Amazon Q
+  * CloudFront
+  * CloudWatch
+  * IAM
+  * Lambda
+  * Route 53
+  * S3
+  * SNS
+  * WAF
 
-HTTPS with AWS Certificate Manager (ACM)
-
-Custom domain & DNS via Route 53
-
-Fully reproducible infrastructure with Terraform
-
-**Description**
-
-This portfolio website was created to showcase my use of a few AWS cloud services. Please go through my repo and ask me any questions you may have about why I used a specific service or what I would have differtenly. 
+#### Infrastructure as Code (IaC):
+* Terraform
+* Terraform Cloud (HCP)
