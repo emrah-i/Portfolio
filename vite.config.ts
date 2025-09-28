@@ -5,6 +5,7 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   assetsInclude: ["**/*.docx"],
   base: "./",
+  build: { outDir: './terraform/dist' },
   plugins: [
     react(),
     tailwindcss()

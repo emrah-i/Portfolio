@@ -75,11 +75,11 @@ resource "aws_s3_bucket_policy" "allow_access" {
 }
 
 resource "aws_s3_object" "upload_object" {
-     for_each      = fileset("../dist/", "*")
+     for_each      = fileset("./dist/", "*")
      bucket        = aws_s3_bucket.bucket.id
      key           = each.value
-     source        = "../dist/${each.value}"
-     etag          = filemd5("../dist/${each.value}")
+     source        = "./dist/${each.value}"
+     etag          = filemd5("./dist/${each.value}")
      content_type = lookup(
           local.mime_types,
           lower(regex("[^.]*$", each.value)),
@@ -88,11 +88,11 @@ resource "aws_s3_object" "upload_object" {
 }
 
 resource "aws_s3_object" "upload_assets" {
-     for_each      = fileset("../dist/assets/", "*")
+     for_each      = fileset("./dist/assets/", "*")
      bucket        = aws_s3_bucket.bucket.id
      key           = "assets/${each.value}"
-     source        = "../dist/assets/${each.value}"
-     etag          = filemd5("../dist/assets/${each.value}")
+     source        = "./dist/assets/${each.value}"
+     etag          = filemd5("./dist/assets/${each.value}")
      content_type = lookup(
           local.mime_types,
           lower(regex("[^.]*$", each.value)),
