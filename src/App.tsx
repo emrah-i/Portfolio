@@ -1,20 +1,93 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import profile from "./assets/profile.jpg"
 import aws from "./assets/aws.png"
 import aws_white from "./assets/aws-white.png"
 import hashicorp from "./assets/hashicorp.png"
 import hashicorp_white from "./assets/hashicorp-white.png"
 import resumeFile from "./assets/Resume.docx";
+import z from 'zod';
+
+const api_url = "https://emrakh.com/v1/metric"
+
+const endpoints = {
+    page_views: "?metric_name=page_views",
+    resume_downloads: "?metric_name=resume_downloads",
+    email_clicks: "?metric_name=email_clicks",
+    github_redirects: "?metric_name=github_redirects",
+    linkedin_redirects: "?metric_name=linkedin_redirects",
+    cert_redirects: "?metric_name=cert_redirects"
+}
+
+const endpoint_keys = Object.keys(endpoints) as (keyof typeof endpoints)[];
+
+const metricsSchema = z.array(z.object({
+    metric_name: z.enum(endpoint_keys),
+    count_total: z.number()
+}))
 
 export default function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
+
+    const [ pageViews, setPageViews ] = useState<number>()
+    const [ resumeDownloads, setResumeDownloads ] = useState<number>()
+    const [ emailClicks, setEmailClicks ] = useState<number>()
+    const [ githubRedirects, setGithubRedirects ] = useState<number>()
+    const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>()
+    const [ certRedirects, setCertRedirects ] = useState<number>()
+    
+    const about = useRef<HTMLDivElement>(null)
+
+    useEffect(()=>{
+        startUp()
+    }, [])
+
+    async function startUp() {
+        await handlePutRequest("page_views")
+        await handleGetRequest()
+    }
+
+    async function handleGetRequest() {
+        const data = await fetch(api_url, { method: "GET" })
+        const json = await data.json()
+
+        const parsed = metricsSchema.safeParse(json)
+
+        if (!parsed.success) return
+
+        for (const item of parsed.data) {
+            switch (item.metric_name) {
+                case "page_views":
+                    setPageViews(item.count_total)
+                    break
+                case "resume_downloads":
+                    setResumeDownloads(item.count_total)
+                    break
+                case "email_clicks":
+                    setEmailClicks(item.count_total)
+                    break
+                case "github_redirects":
+                    setGithubRedirects(item.count_total)
+                    break
+                case "linkedin_redirects":
+                    setLinkedinRedirects(item.count_total)
+                    break
+                case "cert_redirects":
+                    setCertRedirects(item.count_total)
+                    break
+            }
+        }
+    }
+
+    async function handlePutRequest(type: keyof typeof endpoints) {
+        await fetch(api_url + endpoints[type], { method: "PUT" })
+    }
 
     return (
         <div className={`w-screen ${isDarkMode ? 'dark' : ''}`}>
             <nav className="fixed w-full top-0 left-1/2 -translate-x-1/2 z-[999] bg-[#FBF7F2] dark:bg-[#2D2A27] py-2 shadow-xl">
                 <div className="container mx-auto flex justify-between items-center px-4">
                     <div className='w-full'>
-                        <p onClick={()=>scrollTo(0, 0)} className="text-3xl font-black text-[#F05454] no-underline relative group cursor-pointer">
+                        <p onClick={()=>scrollTo({top: 0, left: 0, behavior: "smooth"})} className="text-3xl font-black text-[#F05454] no-underline relative group cursor-pointer">
                             <span>E<span className="inline-block max-w-0 group-hover:max-w-full align-bottom overflow-hidden whitespace-nowrap duration-450 ease-in-out">mrakh</span>&nbsp;I</span>
                         </p>
                     </div>
@@ -26,7 +99,7 @@ export default function App() {
                         </button>
                     </div>
                     <div className="w-full flex justify-end">
-                        <a href="#about_section" className="text-2xl font-black text-[#F05454] no-underline relative group">
+                        <a onClick={()=>about.current && about.current.scrollIntoView({behavior: "smooth", block: "center"})} className="text-2xl font-black text-[#F05454] no-underline relative cursor-pointer">
                             About
                             <span className="absolute bottom-0 left-0 h-1 bg-[#F05454] w-0 group-hover:w-full transition-all duration-250 ease-in-out"></span>
                         </a>
@@ -51,6 +124,7 @@ export default function App() {
                             <div className="flex flex-wrap justify-start gap-4 mt-4 h-11 md:h-13">
                                 <a 
                                     href='https://github.com/emrah-i'
+                                    onClick={()=>{handlePutRequest("github_redirects"); githubRedirects !== undefined && setGithubRedirects(prev=>prev! + 1)}}
                                     target="_blank"
                                     className="h-full flex items-center px-3 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-250 cursor-pointer"
                                 >
@@ -58,6 +132,7 @@ export default function App() {
                                 </a>
                                 <a 
                                     href='https://www.linkedin.com/in/emrakh-i/'
+                                    onClick={()=>{handlePutRequest("linkedin_redirects"); linkedinRedirects !== undefined && setLinkedinRedirects(prev=>prev! + 1)}}
                                     target="_blank"
                                     className="h-full flex items-center px-3 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-250 cursor-pointer"
                                 >
@@ -65,13 +140,15 @@ export default function App() {
                                 </a>
                                 <a 
                                     href='mailto:ibraem1026@gmail.com'
+                                    onClick={()=>{handlePutRequest("email_clicks"); emailClicks !== undefined && setEmailClicks(prev=>prev! + 1)}}
                                     className="h-full flex items-center px-3 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-250 cursor-pointer"
                                 >
                                     <i className="text-2xl md:text-3xl fa-solid fa-envelope"></i>
                                 </a>
                                 <a 
                                     href={resumeFile}
-                                    download="Resume"
+                                    onClick={()=>{handlePutRequest("resume_downloads"); resumeDownloads !== undefined && setResumeDownloads(prev=>prev! + 1)}}
+                                    download="Resume.docx"
                                     className="h-full flex items-center text-xl md:text-2xl flex items-center font-bold px-5 pb-0.5 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer"
                                 >
                                     Resume
@@ -94,7 +171,7 @@ export default function App() {
                 </div>
 
                 <div className="container flex flex-col gap-y-16 mx-auto px-4">
-                    <div id="about_section" className="w-full border-4 border-[#F05454] rounded-2xl mx-auto">
+                    <div ref={about} className="w-full border-4 border-[#F05454] rounded-2xl mx-auto">
                         <div className="bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max mb-4">About Me</h1>
                             <p className="font-semibold">I'm a full-stack developer with hands-on production experience in building, updating, and maintaining infrastructure. My journey began with Harvard's CS50 course, which laid a strong foundation and sparked my drive to continually learn and grow in the field.</p>
@@ -115,6 +192,7 @@ export default function App() {
                                         <a 
                                             target='_blank' 
                                             href='https://www.credly.com/badges/2a57772d-c2c9-43fa-a394-fb6e92b68e2c/public_url'
+                                            onClick={()=>{handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev=>prev! + 1)}}
                                             className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                         >
                                             Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
@@ -130,6 +208,7 @@ export default function App() {
                                         <a 
                                             target='_blank' 
                                             href='https://www.credly.com/earner/earned/badge/3147146e-5e57-4fce-a29c-388b0658098e'
+                                            onClick={()=>{handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev=>prev! + 1)}}
                                             className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                         >
                                             Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
@@ -145,6 +224,7 @@ export default function App() {
                                         <a 
                                             target='_blank' 
                                             href='https://www.credly.com/earner/earned/badge/a37d5bdd-e276-48a1-ba80-ab1334d459dc'
+                                            onClick={()=>{handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev=>prev! + 1)}}
                                             className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                         >
                                             Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
