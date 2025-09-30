@@ -82,6 +82,33 @@ export default function App() {
         await fetch(api_url + endpoints[type], { method: "PUT" })
     }
 
+    const all_metrics: { title: string, metric?: number }[] = [
+        {
+            title: "Page\nViews",
+            metric: pageViews
+        },
+        {
+            title: "Resume\nDownloads",
+            metric: resumeDownloads
+        },
+        {
+            title: "Email\nClicks",
+            metric: emailClicks
+        },
+        {
+            title: "Github\nRedirects",
+            metric: githubRedirects
+        },
+        {
+            title: "LinkedIn\nRedirects",
+            metric: linkedinRedirects
+        },
+        {
+            title: "Cert\nRedirects",
+            metric: certRedirects
+        },
+    ]
+
     return (
         <div className={`w-screen ${isDarkMode ? 'dark' : ''}`}>
             <nav className="fixed w-full top-0 left-1/2 -translate-x-1/2 z-[999] bg-[#FBF7F2] dark:bg-[#2D2A27] py-2 shadow-xl">
@@ -93,7 +120,7 @@ export default function App() {
                     </div>
                     <div className="w-full flex justify-center items-center space-x-6">
                         <button 
-                            onClick={() => setIsDarkMode(!isDarkMode)} 
+                            onClick={()=>setIsDarkMode(!isDarkMode)} 
                             className="w-12 h-12 flex justify-center items-center bg-transparent cursor-pointer border-none rounded-full p-2 duration-150 ease-in-out hover:bg-[#E1DED980] hover:scale-[1.05]">
                             <i className={`text-[#F05454] text-3xl fa-solid ${isDarkMode ? "fa-sun" : "fa-moon"}`}></i>                        
                         </button>
@@ -108,7 +135,7 @@ export default function App() {
             </nav>
 
             <main className="flex flex-col gap-y-40 pt-20 pb-10 no-scrollbar bg-[#FBF7F2] text-[#F05454] dark:bg-[#2D2A27] font-sans font-black">
-                <div className="container mx-auto px-4 justify-center">
+                <div className="container flex flex-col gap-y-20 mx-auto px-4 justify-center">
                     <div className="flex flex-col lg:flex-row justify-center items-center mt-12 gap-12 md:gap-8">
                         <div className="aspect-square mt-8 flex justify-center items-start overflow-hidden rounded-full h-[18rem] md:h-[22rem] xl:h-[28rem] shadow-[0px_0px_15px_#00000080] transition-all duration-300 ease-in-out hover:scale-[1.05]">
                             <img src={profile} alt="My Picture" className="w-auto h-full max-w-none"/>
@@ -156,8 +183,15 @@ export default function App() {
                             </div>
                         </div>
                     </div>
-
-                    <div className="flex justify-center mt-30">
+                    <div className='w-full flex items-center justify-center gap-3 flex-wrap'>
+                        {all_metrics.map(el=>{
+                            return <div className='w-36 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg py-4 px-6 flex flex-col items-center justify-center gap-y-2'>
+                                    <p className='text-4xl'>{el.metric !== undefined ? el.metric : <i className="text-3xl fa-solid fa-spinner animate-spin"></i>}</p>
+                                    <p className='text-lg text-center font-normal whitespace-pre-line'>{el.title}</p>
+                                   </div>
+                        })}
+                    </div>
+                    <div className="flex justify-center mt-">
                         <button className="bg-transparent rounded-full aspect-square border-none">
                         <i className="text-3xl fa-solid fa-chevron-down"></i>
                         </button>
