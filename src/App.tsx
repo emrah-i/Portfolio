@@ -28,12 +28,12 @@ const metricsSchema = z.array(z.object({
 export default function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    const [ pageViews, setPageViews ] = useState<number>()
-    const [ resumeDownloads, setResumeDownloads ] = useState<number>()
-    const [ emailClicks, setEmailClicks ] = useState<number>()
-    const [ githubRedirects, setGithubRedirects ] = useState<number>()
-    const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>()
-    const [ certRedirects, setCertRedirects ] = useState<number>()
+    const [ pageViews, setPageViews ] = useState<number>(0)
+    const [ resumeDownloads, setResumeDownloads ] = useState<number>(0)
+    const [ emailClicks, setEmailClicks ] = useState<number>(0)
+    const [ githubRedirects, setGithubRedirects ] = useState<number>(0)
+    const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>(0)
+    const [ certRedirects, setCertRedirects ] = useState<number>(0)
     
     const about = useRef<HTMLDivElement>(null)
 
@@ -104,7 +104,7 @@ export default function App() {
             metric: linkedinRedirects
         },
         {
-            title: "Cert\nRedirects",
+            title: "Credly\nRedirects",
             metric: certRedirects
         },
     ]
@@ -183,11 +183,11 @@ export default function App() {
                             </div>
                         </div>
                     </div>
-                    <div className='w-full flex items-center justify-center gap-3 flex-wrap'>
+                    <div className='w-full flex items-center justify-center gap-4 flex-wrap'>
                         {all_metrics.map(el=>{
-                            return <div className='w-36 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg py-4 px-6 flex flex-col items-center justify-center gap-y-2'>
-                                    <p className='text-4xl'>{el.metric !== undefined ? el.metric : <i className="text-3xl fa-solid fa-spinner animate-spin"></i>}</p>
-                                    <p className='text-lg text-center font-normal whitespace-pre-line'>{el.title}</p>
+                            return <div className='w-32 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg py-4 px-6 flex flex-col items-center justify-center gap-y-2'>
+                                    <p className='text-3xl'>{el.metric !== undefined ? el.metric : <i className="text-3xl fa-solid fa-spinner animate-spin"></i>}</p>
+                                    <p className='text-center font-normal whitespace-pre-line'>{el.title}</p>
                                    </div>
                         })}
                     </div>
