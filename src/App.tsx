@@ -28,12 +28,12 @@ const metricsSchema = z.array(z.object({
 export default function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    const [ pageViews, setPageViews ] = useState<number>(0)
-    const [ resumeDownloads, setResumeDownloads ] = useState<number>(0)
-    const [ emailClicks, setEmailClicks ] = useState<number>(0)
-    const [ githubRedirects, setGithubRedirects ] = useState<number>(0)
-    const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>(0)
-    const [ certRedirects, setCertRedirects ] = useState<number>(0)
+    const [ pageViews, setPageViews ] = useState<number>()
+    const [ resumeDownloads, setResumeDownloads ] = useState<number>()
+    const [ emailClicks, setEmailClicks ] = useState<number>()
+    const [ githubRedirects, setGithubRedirects ] = useState<number>()
+    const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>()
+    const [ certRedirects, setCertRedirects ] = useState<number>()
     
     const about = useRef<HTMLDivElement>(null)
 
