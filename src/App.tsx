@@ -269,25 +269,11 @@ export default function App() {
                         </div>
                     </div>
                     <div className="w-full border-4 border-[#F05454] rounded-2xl mx-auto">
-                        <div className="bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] p-6 pt-4 text-lg font-medium">
-                            <h1 className="text-4xl font-bold w-max">Projects</h1>
-                            <div className='flex flex-col gap-y-2 p-4 pt-5'>
-                                <div className='flex flex-col gap-y-2'>
-                                    <p className='text-[1.75rem] font-semibold'>1. Portfolio</p>
-                                    <div className='ml-8 flex flex-col gap-y-2'>
-                                        <p>Designed, deployed, and maintained a personal portfolio website by leveraging AWS S3 for static site hosting, Route 53 for domain management, and AWS Certificate Manager (ACM) for SSL/TLS encryption, ensuring secure and highly available access.</p>
-                                        <p>Implemented Infrastructure as Code (IaC) with Terraform to automate provisioning, configuration, and updates, enabling repeatable deployments and reducing setup time.</p>
-                                    </div>
-                                </div>
-                                <div className='flex flex-col gap-y-2'>
-                                    <p className='text-[1.75rem] font-semibold'>2. Cybersecurity Training Platform</p>
-                                    <div className='ml-8 flex flex-col gap-y-2'>
-                                        <p>Developed a cybersecurity training platform tailored for students pursuing professional certifications, providing an interactive environment to practice and master core security concepts.</p>
-                                        <p>Built a learning portal enabling users to access structured articles, labs, images, and video tutorials, improving knowledge retention and offering multiple learning modalities.</p>
-                                        <p>Implemented end-to-end user functionality, including registration, authentication, and subscription purchasing workflows, ensuring secure access control and monetization.</p>
-                                        <p>Completed infrastructure design and full implementation; <u>capable of presenting a detailed deployment strategy covering scalability, security hardening, and cloud-based hosting options.</u></p>
-                                    </div>
-                                </div>
+                        <div className="bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] p-6 pt-4 text-lg font-normal">
+                            <h1 className="text-4xl font-bold w-max mb-4">About This Project</h1>
+                            <div className='flex flex-col gap-y-2'>
+                                <p>Designed, deployed, and maintained a personal portfolio website by leveraging AWS S3 for static site hosting, Route 53 for domain management, and AWS Certificate Manager (ACM) for SSL/TLS encryption, ensuring secure and highly available access.</p>
+                                <p>Implemented Infrastructure as Code (IaC) with Terraform to automate provisioning, configuration, and updates, enabling repeatable deployments and reducing setup time.</p>
                             </div>
                         </div>
                     </div>
