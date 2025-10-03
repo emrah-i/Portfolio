@@ -114,8 +114,16 @@ export default function App() {
             <nav className="fixed w-full top-0 left-1/2 -translate-x-1/2 z-[999] bg-[#FBF7F2] dark:bg-[#2D2A27] py-2 shadow-xl">
                 <div className="container mx-auto flex justify-between items-center px-4">
                     <div className='w-full'>
-                        <p onClick={()=>scrollTo({top: 0, left: 0, behavior: "smooth"})} className="text-3xl font-black text-[#F05454] no-underline relative group cursor-pointer">
-                            <span>E<span className="inline-block max-w-0 group-hover:max-w-full align-bottom overflow-hidden whitespace-nowrap duration-450 ease-in-out">mrakh</span>&nbsp;I</span>
+                        <p 
+                            onClick={()=>scrollTo({top: 0, left: 0, behavior: "smooth"})} 
+                            className="w-fit text-3xl font-black text-[#F05454] no-underline relative group cursor-pointer"
+                        >
+                            <p>
+                                E
+                                <span className="inline-block max-w-0 group-hover:max-w-full align-bottom overflow-hidden whitespace-nowrap duration-200 ease-in-out">
+                                    mrakh
+                                </span>&nbsp;I
+                            </p>
                         </p>
                     </div>
                     <div className="w-full flex justify-center items-center space-x-6">
@@ -126,7 +134,10 @@ export default function App() {
                         </button>
                     </div>
                     <div className="w-full flex justify-end">
-                        <a onClick={()=>about.current && about.current.scrollIntoView({behavior: "smooth", block: "center"})} className="text-2xl font-black text-[#F05454] no-underline relative cursor-pointer">
+                        <a 
+                            onClick={()=>about.current && about.current.scrollIntoView({behavior: "smooth", block: "center"})} 
+                            className="text-2xl font-black text-[#F05454] no-underline relative cursor-pointer group"
+                        >
                             About
                             <span className="absolute bottom-0 left-0 h-1 bg-[#F05454] w-0 group-hover:w-full transition-all duration-250 ease-in-out"></span>
                         </a>
