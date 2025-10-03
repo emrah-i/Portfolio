@@ -31,7 +31,7 @@ locals {
     ttf  = "font/ttf"
     otf  = "font/otf"
     pdf  = "application/pdf"
-  }
+  } 
 }
 
 resource "aws_s3_bucket" "bucket" {

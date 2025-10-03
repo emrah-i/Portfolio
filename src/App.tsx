@@ -121,7 +121,7 @@ export default function App() {
                             <p>
                                 E
                                 <span className="inline-block max-w-0 group-hover:max-w-full align-bottom overflow-hidden whitespace-nowrap duration-200 ease-in-out">
-                                    mrakh
+                                    mrakh 2
                                 </span>&nbsp;I
                             </p>
                         </p>
