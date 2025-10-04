@@ -219,9 +219,11 @@ export default function App() {
                     <div ref={about} className="w-full border-4 border-[#F05454] rounded-2xl mx-auto">
                         <div className="bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max mb-4">About Me</h1>
-                            <p className="font-semibold">I'm a full-stack developer with hands-on production experience in building, updating, and maintaining infrastructure. My journey began with Harvard's CS50 course, which laid a strong foundation and sparked my drive to continually learn and grow in the field.</p>
-                            <p className="mt-4">As I've advanced, I've developed not only the ability to deliver clean and efficient code, but also to design and maintain secure, scalable systems. I am currently pivoting toward DevOps/SRE, where my mix of programming expertise and infrastructure management experience allows me to bridge development and operations seamlessly.</p>
-                            <p className="mt-4">Beyond the technical skills, I bring adaptability, persistence, and a collaborative mindset. My strength lies in not just working hard, but in going deep into the details to achieve reliable, high-impact results.</p>
+                            <p>
+                                I'm a cloud engineer/full-stack developer with hands-on production experience in building, updating, and maintaining infrastructure. 
+                                As I've advanced in my career, I've developed not only the ability to deliver clean and efficient code, but also to design and maintain secure, scalable systems. 
+                                My mix of programming expertise and infrastructure management experience allows me to bridge development and operations seamlessly.
+                            </p>
                         </div>
                     </div>
                     <div className="w-full border-4 border-[#F05454] rounded-2xl">
@@ -283,8 +285,38 @@ export default function App() {
                         <div className="bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max mb-4">About This Project</h1>
                             <div className='flex flex-col gap-y-2'>
-                                <p>Designed, deployed, and maintained a personal portfolio website by leveraging AWS S3 for static site hosting, Route 53 for domain management, and AWS Certificate Manager (ACM) for SSL/TLS encryption, ensuring secure and highly available access.</p>
-                                <p>Implemented Infrastructure as Code (IaC) with Terraform to automate provisioning, configuration, and updates, enabling repeatable deployments and reducing setup time.</p>
+                                <p>
+                                    I designed and operated a production-ready static portfolio platform that showcases end-to-end DevOps practice. 
+                                    The site is built with Vite, TypeScript, React, and Tailwind CSS and served from an S3 bucket behind a CloudFront distribution, with a custom domain managed in Route 53 (A/AAAA records) and ACM-issued TLS for secure delivery. 
+                                    The dynamic portion of the infrastructure is codified in Terraform and deployed via a GitHub + Terraform HCP pipeline that plans and applies automatically on every push to main. 
+                                </p>
+                                <p>
+                                    A serverless metrics stack powers simple analytics: API Gateway triggers one Lambda to update a DynamoDB table and another to retrieve metrics. 
+                                    Security and reliability are baked in with AWS WAF in front of the API to restrict access and apply rate limiting, plus CloudWatch alarms for billing thresholds and Lambda activity. 
+                                    Alerts fan-out through SNS to email and Slack (via Amazon Q Developer), providing immediate notifications. 
+                                    The result is a secure, scalable, low-cost website with fully automated, repeatable deployments and production-grade monitoring and controls.
+                                </p>
+                                <br/>
+                                <p>
+                                    <span>To view the GitHub repository: </span>
+                                    <a 
+                                        className='underline hover:font-semibold duration-100'
+                                        target='_blank'
+                                        href='https://github.com/emrah-i/Portfolio'
+                                    >
+                                        click here
+                                    </a>
+                                </p>
+                                <p>
+                                    <span>To read a detailed explanation of the project: </span>
+                                    <a 
+                                        className='underline hover:font-semibold duration-100'
+                                        target='_blank'
+                                        href='https://medium.com/@ibraem1026/my-journey-deploying-my-portfolio-to-the-cloud-b6361122b87d'
+                                    >
+                                        click here
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     </div>
