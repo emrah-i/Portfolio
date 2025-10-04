@@ -1,19 +1,23 @@
-## Portfolio Website (AWS + Terraform)
+## Portfolio Website
 
 ### Description
 
-A fast, secure, and low-cost personal portfolio website deployed using AWS and Terraform. Please go through the repo and ask me any questions you may have about why I used a specific service or what I would have done differently. 
+I designed and operated a production-ready static portfolio platform that showcases end-to-end DevOps practice. The site is built with Vite, TypeScript, React, and Tailwind CSS and served from an S3 bucket behind a CloudFront distribution, with a custom domain managed in Route 53 (A/AAAA records) and ACM-issued TLS for secure, IPv6-enabled delivery. The dynamic portion of the infrastructure is codified in Terraform and deployed via a GitHub + Terraform HCP pipeline that plans and applies automatically on every push to main.
+
+A serverless metrics stack powers simple analytics: API Gateway triggers one Lambda to update a DynamoDB table and another to retrieve metrics. Security and reliability are baked in with AWS WAF in front of the API to restrict access and apply rate limiting, plus CloudWatch alarms for billing thresholds and Lambda activity. Alerts fan-out through SNS to email and Slack (via Amazon Q Developer), providing immediate notifications. The result is a secure, scalable, low-cost website with fully automated, repeatable deployments and production-grade monitoring and controls.
 
 Portfolio: [https://emrakh.com](https:/emrakh.com)
-<!-- Blog post explaining technology used:  -->
+
+Blog Post About Website: [https://medium.com/@ibraem1026](https://medium.com/@ibraem1026/my-journey-deploying-my-portfolio-to-the-cloud-b6361122b87d)
 
 ### Used Technology
 
-#### Cloud:
+* Terraform
+* Terraform Cloud (HCP)
 * AWS:
   * ACM
   * API Gateway
-  * Amazon Q
+  * Amazon Q Developer
   * CloudFront
   * CloudWatch
   * IAM
@@ -23,6 +27,3 @@ Portfolio: [https://emrakh.com](https:/emrakh.com)
   * SNS
   * WAF
 
-#### Infrastructure as Code (IaC):
-* Terraform
-* Terraform Cloud (HCP)
