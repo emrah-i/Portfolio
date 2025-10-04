@@ -286,7 +286,7 @@ export default function App() {
                             <h1 className="text-4xl font-bold w-max mb-4">About This Project</h1>
                             <div className='flex flex-col gap-y-2'>
                                 <p>
-                                    I designed and operated a production-ready static portfolio platform that showcases end-to-end DevOps practice. 
+                                    I designed and built a production-ready static portfolio website that showcases end-to-end DevOps practice. 
                                     The site is built with Vite, TypeScript, React, and Tailwind CSS and served from an S3 bucket behind a CloudFront distribution, with a custom domain managed in Route 53 (A/AAAA records) and ACM-issued TLS for secure delivery. 
                                     The dynamic portion of the infrastructure is codified in Terraform and deployed via a GitHub + Terraform HCP pipeline that plans and applies automatically on every push to main. 
                                 </p>
