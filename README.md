@@ -8,7 +8,7 @@ A serverless metrics stack powers simple analytics: API Gateway triggers one Lam
 
 Portfolio: [https://emrakh.com](https:/emrakh.com)
 
-Blog Post About Website: [https://medium.com/@ibraem1026](https://medium.com/@ibraem1026/my-journey-deploying-my-portfolio-to-the-cloud-b6361122b87d)
+Detailed Blog Post About Website: [https://medium.com/@ibraem1026](https://medium.com/@ibraem1026/my-journey-deploying-my-portfolio-to-the-cloud-b6361122b87d)
 
 ### Used Technology
 
@@ -26,4 +26,5 @@ Blog Post About Website: [https://medium.com/@ibraem1026](https://medium.com/@ib
   * S3
   * SNS
   * WAF
+
 
