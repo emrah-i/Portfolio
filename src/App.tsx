@@ -224,6 +224,19 @@ export default function App() {
                                 As I've advanced in my career, I've developed not only the ability to deliver clean and efficient code, but also to design and maintain secure, scalable systems. 
                                 My mix of programming expertise and infrastructure management experience allows me to bridge development and operations seamlessly.
                             </p>
+                            <div className='flex flex-col gap-y-2 mt-4'>
+                                <p className='font-bold text-2xl'>Experience</p>
+                                <div className='w-full flex justify-between'>
+                                    <p className='font-semibold text-xl italic ml-6'>Full Stack Developer, <span className='not-italic'>SOCSoter</span></p>
+                                    <p className='font-semibold'>November 2023 - Present</p>
+                                </div>
+                                <p className='ml-6'>
+                                    In this role, I built, maintained, and troubleshot company servers and datastores across multiple applications to ensure stable operations and rapid incident resolution. 
+                                    In parallel, I engineered and ran a reporting platform that delivered <u>thousands</u> of dynamic, customer-specific reports. 
+                                    Additionally, I overhauled our Cron orchestration server, reducing job failures from 2-3 per week to zero, and rebuilt authentication with 2FA and self-service password reset to hardening account security. 
+                                    I also developed a phishing detection system that parses browser history and correlates activity against known indicators, and I updated and maintained SIEM log ingestion, driving reporting data reliability to ~100%.
+                                </p> 
+                            </div>
                         </div>
                     </div>
                     <div className="w-full border-4 border-[#F05454] rounded-2xl">
@@ -328,7 +341,7 @@ export default function App() {
                                     <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#F05454] rounded-full p-7 pb-7.5 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#FBF7F2] dark:text-[#2D2A27] text-4xl fa-solid fa-cloud"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-black relative w-max">Cloud Providers</h1>
+                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">Cloud Providers</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {["AWS"].map(skill=>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
@@ -339,7 +352,7 @@ export default function App() {
                                     <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#F05454] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#FBF7F2] dark:text-[#2D2A27] text-4xl fa-solid fa-screwdriver-wrench"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-black relative w-max">DevOps Tools</h1>
+                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">DevOps Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['Terraform', 'Docker', 'Kubernetes', 'GitHub Actions', 'Linux CLI'].map(skill=>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
@@ -350,7 +363,7 @@ export default function App() {
                                     <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#F05454] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#FBF7F2] dark:text-[#2D2A27] text-4xl fa-solid fa-code"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-black relative w-max">Languages</h1>
+                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">Languages</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['TypeScript', 'JavaScript', 'Python', 'PHP', 'Rust'].map(skill=>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
@@ -361,7 +374,7 @@ export default function App() {
                                     <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#F05454] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#FBF7F2] dark:text-[#2D2A27] text-4xl fa-solid fa-database"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-black relative w-max">Datastores</h1>
+                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">Datastores</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['MySQL', 'PostgreSQL', 'AWS RDS', 'DynamoDB', 'Redis', 'MongoDB'].map(skill=>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
