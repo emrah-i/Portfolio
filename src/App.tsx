@@ -10,9 +10,8 @@ const api_url = "https://emrakh.com/v1/metric"
 
 const endpoints = {
     page_views: "?metric_name=page_views",
-    // resume_downloads: "?metric_name=resume_downloads",
     email_clicks: "?metric_name=email_clicks",
-    // github_redirects: "?metric_name=github_redirects",
+    github_redirects: "?metric_name=github_redirects",
     linkedin_redirects: "?metric_name=linkedin_redirects",
     cert_redirects: "?metric_name=cert_redirects"
 }
@@ -28,9 +27,7 @@ export default function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     const [ pageViews, setPageViews ] = useState<number>()
-    // const [ resumeDownloads, setResumeDownloads ] = useState<number>()
     const [ emailClicks, setEmailClicks ] = useState<number>()
-    // const [ githubRedirects, setGithubRedirects ] = useState<number>()
     const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>()
     const [ certRedirects, setCertRedirects ] = useState<number>()
     
