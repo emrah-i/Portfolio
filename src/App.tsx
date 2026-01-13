@@ -64,9 +64,9 @@ export default function App() {
                 case "email_clicks":
                     setEmailClicks(item.count_total)
                     break
-                case "github_redirects":
-                    setGithubRedirects(item.count_total)
-                    break
+                // case "github_redirects":
+                //     setGithubRedirects(item.count_total)
+                //     break
                 case "linkedin_redirects":
                     setLinkedinRedirects(item.count_total)
                     break
@@ -159,14 +159,14 @@ export default function App() {
                                 <span>Backend Developer</span>
                             </div>
                             <div className="flex flex-wrap justify-start gap-4 mt-4 h-11 md:h-13">
-                                <a 
+                                {/* <a 
                                     href='https://github.com/emrah-i'
                                     onClick={()=>{handlePutRequest("github_redirects"); githubRedirects !== undefined && setGithubRedirects(prev=>prev! + 1)}}
                                     target="_blank"
                                     className="h-full flex items-center px-3 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-250 cursor-pointer"
                                 >
                                     <i className="text-2xl md:text-3xl fa-brands fa-github"></i>
-                                </a>
+                                </a> */}
                                 <a 
                                     href='https://www.linkedin.com/in/emrakh-i/'
                                     onClick={()=>{handlePutRequest("linkedin_redirects"); linkedinRedirects !== undefined && setLinkedinRedirects(prev=>prev! + 1)}}
@@ -353,7 +353,7 @@ export default function App() {
                                     </div>
                                     <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">DevOps Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
-                                        {['Terraform', 'Docker', 'Kubernetes', 'GitHub Actions', 'Linux CLI'].map(skill=>
+                                        {['Terraform', 'Ansible', 'Docker', 'Kubernetes', 'GitHub Actions', 'Linux CLI'].map(skill=>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
