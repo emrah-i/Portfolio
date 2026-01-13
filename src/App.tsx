@@ -30,7 +30,7 @@ export default function App() {
     const [ pageViews, setPageViews ] = useState<number>()
     // const [ resumeDownloads, setResumeDownloads ] = useState<number>()
     const [ emailClicks, setEmailClicks ] = useState<number>()
-    const [ githubRedirects, setGithubRedirects ] = useState<number>()
+    // const [ githubRedirects, setGithubRedirects ] = useState<number>()
     const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>()
     const [ certRedirects, setCertRedirects ] = useState<number>()
     
@@ -58,15 +58,9 @@ export default function App() {
                 case "page_views":
                     setPageViews(item.count_total)
                     break
-                // case "resume_downloads":
-                //     setResumeDownloads(item.count_total)
-                //     break
                 case "email_clicks":
                     setEmailClicks(item.count_total)
                     break
-                // case "github_redirects":
-                //     setGithubRedirects(item.count_total)
-                //     break
                 case "linkedin_redirects":
                     setLinkedinRedirects(item.count_total)
                     break
@@ -86,17 +80,9 @@ export default function App() {
             title: "Page\nViews",
             metric: pageViews
         },
-        // {
-        //     title: "Resume\nDownloads",
-        //     metric: resumeDownloads
-        // },
         {
             title: "Email\nClicks",
             metric: emailClicks
-        },
-        {
-            title: "Github\nRedirects",
-            metric: githubRedirects
         },
         {
             title: "LinkedIn\nRedirects",
