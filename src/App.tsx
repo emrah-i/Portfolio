@@ -12,7 +12,7 @@ const endpoints = {
     page_views: "?metric_name=page_views",
     // resume_downloads: "?metric_name=resume_downloads",
     email_clicks: "?metric_name=email_clicks",
-    github_redirects: "?metric_name=github_redirects",
+    // github_redirects: "?metric_name=github_redirects",
     linkedin_redirects: "?metric_name=linkedin_redirects",
     cert_redirects: "?metric_name=cert_redirects"
 }
