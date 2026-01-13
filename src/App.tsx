@@ -219,6 +219,17 @@ export default function App() {
                                     Additionally, I overhauled our Cron orchestration server, reducing job failures from 2-3 per week to zero, and rebuilt authentication with 2FA and self-service password reset to hardening account security. 
                                     I also developed a phishing detection system that parses browser history and correlates activity against known indicators, and I updated and maintained SIEM log ingestion, driving reporting data reliability to ~100%.
                                 </p> 
+                                <div className='w-full flex justify-between'>
+                                    <p className='font-semibold text-xl italic ml-6'>Jr. Cloud Engineer, <span className='not-italic'>NCR Corporation - Wintech IT Solutions</span></p>
+                                    <p className='font-semibold'>February 2022 - September 2023</p>
+                                </div>
+                                <p className='ml-6'>
+                                    In this role, I provided day-to-day operational support across environments, 
+                                    monitored system health, logs, and alerts to keep services stable, and tracked key operational metrics—including alerts, incidents, and CI/CD pipeline errors.
+                                    Under senior guidance, I troubleshot CI/CD pipeline failures, supported patching and routine maintenance across application and infrastructure layers, 
+                                    and assisted with Infrastructure as Code efforts using Ansible and Terraform. 
+                                    I also updated configurations and lightweight scripts and performed Linux-based log reviews and command-line troubleshooting.
+                                </p> 
                             </div>
                         </div>
                     </div>
