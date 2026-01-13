@@ -4,14 +4,13 @@ import aws from "./assets/aws.png"
 import aws_white from "./assets/aws-white.png"
 import hashicorp from "./assets/hashicorp.png"
 import hashicorp_white from "./assets/hashicorp-white.png"
-import resumeFile from "./assets/Resume.docx";
 import z from 'zod';
 
 const api_url = "https://emrakh.com/v1/metric"
 
 const endpoints = {
     page_views: "?metric_name=page_views",
-    resume_downloads: "?metric_name=resume_downloads",
+    // resume_downloads: "?metric_name=resume_downloads",
     email_clicks: "?metric_name=email_clicks",
     github_redirects: "?metric_name=github_redirects",
     linkedin_redirects: "?metric_name=linkedin_redirects",
@@ -29,7 +28,7 @@ export default function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
     const [ pageViews, setPageViews ] = useState<number>()
-    const [ resumeDownloads, setResumeDownloads ] = useState<number>()
+    // const [ resumeDownloads, setResumeDownloads ] = useState<number>()
     const [ emailClicks, setEmailClicks ] = useState<number>()
     const [ githubRedirects, setGithubRedirects ] = useState<number>()
     const [ linkedinRedirects, setLinkedinRedirects ] = useState<number>()
@@ -59,9 +58,9 @@ export default function App() {
                 case "page_views":
                     setPageViews(item.count_total)
                     break
-                case "resume_downloads":
-                    setResumeDownloads(item.count_total)
-                    break
+                // case "resume_downloads":
+                //     setResumeDownloads(item.count_total)
+                //     break
                 case "email_clicks":
                     setEmailClicks(item.count_total)
                     break
@@ -87,10 +86,10 @@ export default function App() {
             title: "Page\nViews",
             metric: pageViews
         },
-        {
-            title: "Resume\nDownloads",
-            metric: resumeDownloads
-        },
+        // {
+        //     title: "Resume\nDownloads",
+        //     metric: resumeDownloads
+        // },
         {
             title: "Email\nClicks",
             metric: emailClicks
@@ -183,14 +182,14 @@ export default function App() {
                                 >
                                     <i className="text-2xl md:text-3xl fa-solid fa-envelope"></i>
                                 </a>
-                                <a 
+                                {/* <a 
                                     href={resumeFile}
                                     onClick={()=>{handlePutRequest("resume_downloads"); resumeDownloads !== undefined && setResumeDownloads(prev=>prev! + 1)}}
                                     download="Resume.docx"
                                     className="h-full flex items-center text-xl md:text-2xl flex items-center font-bold px-5 pb-0.5 bg-[#F05454] text-[#FBF7F2] dark:text-[#2D2A27] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer"
                                 >
                                     Resume
-                                </a>
+                                </a> */}
                             </div>
                         </div>
                     </div>
