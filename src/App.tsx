@@ -83,22 +83,22 @@ export default function App() {
             title: "Page\nViews",
             metric: pageViews
         },
-        {
-            title: "Email\nClicks",
-            metric: emailClicks
-        },
+        // {
+        //     title: "Email\nClicks",
+        //     metric: emailClicks
+        // },
         {
             title: "Resume\nDownloads",
             metric: resumeDownloads
         },
-        {
-            title: "LinkedIn\nRedirects",
-            metric: linkedinRedirects
-        },
-        {
-            title: "Credly\nRedirects",
-            metric: certRedirects
-        },
+        // {
+        //     title: "LinkedIn\nRedirects",
+        //     metric: linkedinRedirects
+        // },
+        // {
+        //     title: "Credly\nRedirects",
+        //     metric: certRedirects
+        // },
     ]
 
     return (
