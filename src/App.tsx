@@ -27,7 +27,7 @@ const metricsSchema = z.array(z.object({
 export default function App() {
     const [isDarkMode, setIsDarkMode] = useState(false);
 
-    const [pageViews, setPageViews] = useState<number>(283)
+    const [pageViews, setPageViews] = useState<number>()
     const [emailClicks, setEmailClicks] = useState<number>()
     const [linkedinRedirects, setLinkedinRedirects] = useState<number>()
     const [resumeDownloads, setResumeDownloads] = useState<number>()
