@@ -193,7 +193,7 @@ export default function App() {
                         <div className="bg-[#1d3657] text-[#ecf0f1] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max mb-4">About Me</h1>
                             <p>
-                                I'm a cloud engineer/full-stack developer with hands-on production experience in building, updating, and maintaining infrastructure.
+                                I'm a full-stack developer/devops engineer with hands-on production experience in building, updating, and maintaining infrastructure.
                                 As I've advanced in my career, I've developed not only the ability to deliver clean and efficient code, but also to design and maintain secure, scalable systems.
                                 My mix of programming expertise and infrastructure management experience allows me to bridge development and operations seamlessly.
                             </p>
