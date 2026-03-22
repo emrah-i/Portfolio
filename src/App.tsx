@@ -230,7 +230,7 @@ export default function App() {
                                         I assisted in <u>architecting technical solutions for new projects</u> based on platform and application requirements.
                                         I built and administered Linux infrastructure, including user provisioning, permissions control, SSH configuration, and infrastructure troubleshooting.
                                         I supported <b>Git</b>-based development workflows through repository management, pull requests, feature branching, and merge conflict resolution.
-                                        I investigated and resolved infrastructure and application issues across <u>Linux, networking, databases, containers, and <b>Kubernetes</b> services</u>.
+                                        I investigated and resolved infrastructure and application issues across <u>Linux, networking, databases, containers, and Kubernetes services</u>.
                                     </p>
                                 </div>
 
