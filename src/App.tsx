@@ -201,7 +201,7 @@ export default function App() {
                                 <p className='font-bold text-2xl'>Experience</p>
                                 <div>
                                     <div className='w-full flex justify-between'>
-                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Full Stack Developer / Cloud Engineer, <span className='not-italic'>SOCSoter, Inc.</span></p>
+                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Full Stack Developer / Devops Engineer, <span className='not-italic'>SOCSoter, Inc.</span></p>
                                         <p className='font-semibold'>November 2023 - Present</p>
                                     </div>
                                     <p className='ml-6'>
