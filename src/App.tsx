@@ -201,7 +201,7 @@ export default function App() {
                                 <p className='font-bold text-2xl'>Experience</p>
                                 <div>
                                     <div className='w-full flex justify-between'>
-                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Full Stack Developer / Devops Engineer, <span className='not-italic'>SOCSoter, Inc.</span></p>
+                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Full Stack Developer / DevOps Engineer, <span className='not-italic'>SOCSoter, Inc.</span></p>
                                         <p className='font-semibold'>November 2023 - Present</p>
                                     </div>
                                     <p className='ml-6'>
@@ -216,7 +216,7 @@ export default function App() {
                                         Finally, I built a phishing detection server that alerts on malicious websites identified in browser history.
                                     </p>
                                 </div>
-                                <div>
+                                {/* <div>
                                     <div className='w-full flex justify-between'>
                                         <p className='font-semibold text-xl italic ml-6 mb-1'>DevOps / Cloud Engineer, <span className='not-italic'>NCR Corporation - WinTech</span></p>
                                         <p className='font-semibold'>March 2022 - November 2023</p>
@@ -232,7 +232,7 @@ export default function App() {
                                         I supported <b>Git</b>-based development workflows through repository management, pull requests, feature branching, and merge conflict resolution.
                                         I investigated and resolved infrastructure and application issues across <u>Linux, networking, databases, containers, and Kubernetes services</u>.
                                     </p>
-                                </div>
+                                </div> */}
 
                             </div>
                         </div>
