@@ -129,7 +129,7 @@ export default function App() {
                 </div>
             </nav>
 
-            <main className="flex flex-col gap-y-40 pt-20 pb-10 no-scrollbar bg-[#ecf0f1] text-[#1d3657] font-sans font-black">
+            <main className="flex flex-col gap-y-28 pt-20 pb-10 no-scrollbar bg-[#ecf0f1] text-[#1d3657] font-sans font-black">
                 <div className="container flex flex-col gap-y-20 mx-auto px-4 justify-center">
                     <div className="flex flex-col lg:flex-row justify-center items-center mt-12 gap-12 md:gap-8">
                         <div className="aspect-square mt-8 flex justify-center items-start overflow-hidden rounded-full h-[18rem] md:h-[22rem] xl:h-[28rem] shadow-[0px_0px_15px_#00000080] transition-all duration-300 ease-in-out hover:scale-[1.05]">
@@ -176,7 +176,7 @@ export default function App() {
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col items-start justify-center gap-y-13 container mx-auto px-4">
+                <div className="flex flex-col items-start justify-center gap-y-10 container mx-auto px-4">
                     <div className="text-start flex flex-col gap-y-2 text-2xl lg:text-3xl">
                         <p>"The only way to do great work is to love what you do."</p>
                         <p>- Steve Jobs</p>
@@ -334,45 +334,67 @@ export default function App() {
                     <div className="w-full border-4 border-[#1d3657] rounded-2xl mx-auto">
                         <div className="bg-[#1d3657] text-[#ecf0f1] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max">Technologies</h1>
-                            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-                                <div key={"Cloud"} className="flex flex-col gap-y-3 items-center text-center">
-                                    <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#ecf0f1] rounded-full p-7 pb-7.5 transition-all duration-250 ease-in-out hover:scale-[1.05]">
-                                        <i className="text-[#1d3657] text-4xl fa-solid fa-cloud"></i>
+                            <div className="flex flex-wrap gap-8 justify-between px-10 mt-8">
+                                <div key={"Cloud"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
+                                    <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-7 pb-7.5 transition-all duration-250 ease-in-out hover:scale-[1.05]">
+                                        <i className="text-[#1d3657] text-3xl fa-solid fa-cloud"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">Cloud Providers</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Cloud<br/>Providers</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['AWS'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
                                 </div>
-                                <div key={"DevOps Tools"} className="flex flex-col gap-y-3 items-center text-center">
-                                    <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
-                                        <i className="text-[#1d3657] text-4xl fa-solid fa-screwdriver-wrench"></i>
+                                <div key={"DevOps Tools"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
+                                    <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
+                                        <i className="text-[#1d3657] text-3xl fa-solid fa-screwdriver-wrench"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">DevOps Tools</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">DevOps<br/>Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
-                                        {['Terraform', 'Ansible', 'Docker', 'Kubernetes', 'GitHub Actions', 'Linux CLI', 'Nginx', 'Apache'].map(skill =>
+                                        {['Terraform', 'Ansible', 'Linux CLI', 'Nginx', 'Apache'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
                                 </div>
-                                <div key={"Languages"} className="flex flex-col gap-y-3 items-center text-center">
-                                    <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
-                                        <i className="text-[#1d3657] text-4xl fa-solid fa-code"></i>
+                                <div key={"Containers & Orchestration"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
+                                    <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
+                                        <i className="text-[#1d3657] text-3xl fa-brands fa-docker"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">Languages</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Containers &<br/>Orchestration</h1>
+                                    <div className='flex flex-col gap-y-2'>
+                                        {['Docker', 'Kubernetes', 'Helm'].map(skill =>
+                                            <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div key={"CI/CD Tools"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
+                                    <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
+                                        <i className="text-[#1d3657] text-3xl fa-solid fa-infinity"></i>
+                                    </div>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">CI/CD<br/>Tools</h1>
+                                    <div className='flex flex-col gap-y-2'>
+                                        {['Jenkins', 'Argo CD', 'GitHub Actions'].map(skill =>
+                                            <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
+                                        )}
+                                    </div>
+                                </div>
+                                <div key={"Languages"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
+                                    <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
+                                        <i className="text-[#1d3657] text-3xl fa-solid fa-code"></i>
+                                    </div>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Languages</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['TypeScript', 'JavaScript', 'Python', 'PHP', 'Rust'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
                                 </div>
-                                <div key={"Datastores"} className="flex flex-col gap-y-3 items-center text-center">
-                                    <div className="aspect-square h-24 w-24 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
-                                        <i className="text-[#1d3657] text-4xl fa-solid fa-database"></i>
+                                <div key={"Datastores"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
+                                    <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
+                                        <i className="text-[#1d3657] text-3xl fa-solid fa-database"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-min sm:w-full font-bold relative w-max">Datastores</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Datastores</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['MySQL', 'PostgreSQL', 'AWS RDS', 'DynamoDB', 'Redis', 'MongoDB'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
