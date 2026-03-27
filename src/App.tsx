@@ -334,7 +334,7 @@ export default function App() {
                     <div className="w-full border-4 border-[#1d3657] rounded-2xl mx-auto">
                         <div className="bg-[#1d3657] text-[#ecf0f1] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max">Technologies</h1>
-                            <div className="flex flex-wrap gap-8 justify-between px-10 mt-8">
+                            <div className="flex flex-wrap gap-8 justify-between px-8 mt-8">
                                 <div key={"Cloud"} className="min-w-50 flex-1 flex flex-col gap-y-3 items-center text-center">
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-7 pb-7.5 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-solid fa-cloud"></i>
@@ -383,7 +383,7 @@ export default function App() {
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-solid fa-code"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Languages</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Programming<br/>Languages</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['TypeScript', 'JavaScript', 'Python', 'PHP', 'Rust'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
