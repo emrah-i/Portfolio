@@ -208,9 +208,13 @@ export default function App() {
                                         In this role, I maintained and troubleshot company infrastructure—including servers and datastores—across multiple applications to ensure reliable operations.
                                         I also built and operated a reporting platform that <u>delivered thousands of dynamic, customer-specific reports to end customers</u>.
                                         To improve operational scale, I implemented <b>Ansible</b> to roll out updates across hundreds of cloud SIEM devices and rebuilt the cron orchestration server, <u>reducing job failures from 2-3 per week to zero</u>.
-                                        I further implemented a long-term log retention solution for end customers to meet compliance requirements using <b>AWS S3</b> and <b>IAM</b>, and rebuilt authentication with 2FA and self-service password reset to reduce support tickets and strengthen account security.
+                                        I further implemented a long-term log retention solution for end customers to meet compliance requirements using <b>AWS S3</b> and <b>IAM</b>, 
+                                        rebuilt authentication with 2FA and self-service password reset to reduce support tickets and strengthen account security, 
+                                        and assisted in implementing a compliance tracker system for CMMC and SCF, enabling more efficient tracking of controls, evidence, and compliance status.
                                         I detected and resolved SEV1 outages across SIEM and cloud SIEM platforms, ensuring rapid incident response and minimal service disruption, and developed monitoring tools to improve outage detection and response times.
-                                        I also assisted with integrating <b>GitHub Actions</b> into the CI/CD pipeline, deployed and supported core services such as <b>Nginx</b>, <b>Apache</b>, and <b>MariaDB</b>, and updated and maintained SIEM log ingestion, increasing reporting data reliability to <u>~100%</u>.
+                                        I also assisted with integrating <b>GitHub Actions</b> into the CI/CD pipeline, 
+                                        deployed and supported core services such as <b>Nginx</b>, <b>Apache</b>, and <b>MariaDB</b>, and 
+                                        updated and maintained SIEM log ingestion, increasing reporting data reliability to <u>~100%</u>.
                                         In support of new security capabilities, I assisted in developing a vulnerability management service (VMS) that scans customer networks and delivers actionable findings, as well as an endpoint detection and response (EDR) service that manages data for <u>10,000+ endpoints</u>.
                                         I also conducted technical interviews and evaluated candidates for engineering roles.
                                         Finally, I built a phishing detection server that alerts on malicious websites identified in browser history.
