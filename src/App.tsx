@@ -201,8 +201,20 @@ export default function App() {
                                 <p className='font-bold text-2xl'>Experience</p>
                                 <div>
                                     <div className='w-full flex justify-between'>
-                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Full Stack Developer / DevOps Engineer, <span className='not-italic'>SOCSoter, Inc.</span></p>
-                                        <p className='font-semibold'>November 2023 - Present</p>
+                                        <p className='font-semibold text-xl ml-6 mb-1'>SOCSoter, Inc.</p>
+                                        <p className='font-semibold'>Hagerstown, Maryland</p>
+                                    </div>
+                                    <div className='w-full flex justify-between'>
+                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Mid-Level Full-Stack Developer / DevOps Engineer</p>
+                                        <p className='font-semibold'>April 2025 - Present</p>
+                                    </div>
+                                    <div className='w-full flex justify-between'>
+                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Full-Stack Developer / DevOps Engineer</p>
+                                        <p className='font-semibold'>March 2024 - April 2025</p>
+                                    </div>
+                                    <div className='w-full flex justify-between'>
+                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Junior Full-Stack Developer</p>
+                                        <p className='font-semibold'>November 2023 - March 2024</p>
                                     </div>
                                     <p className='ml-6'>
                                         In this role, I maintained and troubleshot company infrastructure—including servers and datastores—across multiple applications to ensure reliable operations.
@@ -210,7 +222,7 @@ export default function App() {
                                         To improve operational scale, I implemented <b>Ansible</b> to roll out updates across hundreds of cloud SIEM devices and rebuilt the cron orchestration server, <u>reducing job failures from 2-3 per week to zero</u>.
                                         I further implemented a long-term log retention solution for end customers to meet compliance requirements using <b>AWS S3</b> and <b>IAM</b>, 
                                         rebuilt authentication with 2FA and self-service password reset to reduce support tickets and strengthen account security, 
-                                        and assisted in implementing a compliance tracker system for CMMC and SCF, enabling more efficient tracking of controls, evidence, and compliance status.
+                                        and assisted in implementing a <u>compliance tracker system for CMMC and SCF</u>, enabling more efficient tracking of controls, evidence, and compliance status.
                                         I detected and resolved SEV1 outages across SIEM and cloud SIEM platforms, ensuring rapid incident response and minimal service disruption, and developed monitoring tools to improve outage detection and response times.
                                         I also assisted with integrating <b>GitHub Actions</b> into the CI/CD pipeline, 
                                         deployed and supported core services such as <b>Nginx</b>, <b>Apache</b>, and <b>MariaDB</b>, and 
