@@ -137,7 +137,7 @@ export default function App() {
                         </div>
                         <div className="flex flex-col gap-y-1 justify-center text-start md:ml-20">
                             <p className="text-xl md:text-2xl xl:text-3xl font-semibold">Hello I'm,</p>
-                            <p className="text-3xl md:text-4xl xl:text-5xl text-start font-bold">Emrakh Ibragimov</p>
+                            <p className="text-3xl md:text-4xl xl:text-5xl text-start font-bold">Emrah Ibrahim</p>
                             <div className="w-full flex flex-col justify-start items-start text-xl md:text-2xl xl:text-3xl font-semibold">
                                 <span>Cloud Engineer</span>
                                 <span>DevOps Engineer</span>
@@ -153,7 +153,7 @@ export default function App() {
                                     <i className="text-2xl md:text-3xl fa-brands fa-github"></i>
                                 </a> */}
                                 <a
-                                    href='https://www.linkedin.com/in/emrakh-i/'
+                                    href='https://www.linkedin.com/in/emrah-ibrahim/'
                                     onClick={() => { handlePutRequest("linkedin_redirects"); linkedinRedirects !== undefined && setLinkedinRedirects(prev => prev! + 1) }}
                                     target="_blank"
                                     className="h-full flex items-center px-3 bg-[#1d3657] text-[#ecf0f1] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-150 cursor-pointer"
@@ -368,7 +368,7 @@ export default function App() {
                                     </div>
                                     <h1 className="pb-2 text-xl w-full font-bold relative w-max">DevOps<br/>Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
-                                        {['Terraform', 'Ansible', 'Linux CLI', 'Nginx', 'Apache'].map(skill =>
+                                        {['Terraform', 'Ansible',  'Prometheus', 'Grafana', 'Linux CLI', 'Nginx'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
@@ -379,7 +379,7 @@ export default function App() {
                                     </div>
                                     <h1 className="pb-2 text-xl w-full font-bold relative w-max">Containers &<br/>Orchestration</h1>
                                     <div className='flex flex-col gap-y-2'>
-                                        {['Docker', 'Kubernetes', 'Helm'].map(skill =>
+                                        {['Kubernetes', 'Docker', 'Helm'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
