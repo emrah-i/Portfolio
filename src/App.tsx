@@ -193,9 +193,9 @@ export default function App() {
                         <div className="bg-[#1d3657] text-[#ecf0f1] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max mb-4">About Me</h1>
                             <p>
-                                I'm a full-stack developer/devops engineer with hands-on production experience in building, updating, and maintaining infrastructure.
-                                As I've advanced in my career, I've developed not only the ability to deliver clean and efficient code, but also to design and maintain secure, scalable systems.
-                                My mix of programming expertise and infrastructure management experience allows me to bridge development and operations seamlessly.
+                                I'm a full-stack developer/devops engineer/cloud engineer with hands-on production experience in building, updating, and maintaining infrastructure.
+                                As I've advanced in my career, I've developed not only the ability to design and maintain secure, scalable systems, but also deliver clean and efficient code.
+                                My mix of programming expertise and infrastructure management experience allows me to bridge development and cloud operations seamlessly.
                             </p>
                             <div className='flex flex-col gap-y-5 mt-4'>
                                 <p className='font-bold text-2xl'>Experience</p>
@@ -213,17 +213,8 @@ export default function App() {
                                         <p className='font-semibold'>November 2023 - April 2025</p>
                                     </div>
                                     <p className='ml-6'>
-                                        In this role, I maintained and troubleshot company infrastructure—including servers and datastores—across multiple applications to ensure reliable operations.
-                                        I also built and operated a reporting platform that <u>delivered thousands of dynamic, customer-specific reports to end customers</u>.
-                                        To improve operational scale, I implemented <b>Ansible</b> to roll out updates across hundreds of cloud SIEM devices and rebuilt the cron orchestration server, <u>reducing job failures from 2-3 per week to zero</u>.
-                                        I further implemented a long-term log retention solution for end customers to meet compliance requirements using <b>AWS S3</b> and <b>IAM</b>,
-                                        rebuilt authentication with 2FA and self-service password reset to reduce support tickets and strengthen account security,
-                                        and assisted in implementing a <u>compliance tracker system for CMMC and SCF</u>, enabling more efficient tracking of controls, evidence, and compliance status.
-                                        I detected and resolved SEV1 outages across SIEM and cloud SIEM platforms, ensuring rapid incident response and minimal service disruption, and developed monitoring tools to improve outage detection and response times.
-                                        I also assisted updated and maintained SIEM log ingestion, increasing reporting data reliability to <u>~100%</u>.
-                                        In support of new security capabilities, I assisted in developing a vulnerability management service (VMS) that scans customer networks and delivers actionable findings, as well as an endpoint detection and response (EDR) service that manages data for <u>10,000+ endpoints</u>.
-                                        I also conducted technical interviews and evaluated candidates for engineering roles.
-                                        Finally, I built a phishing detection server that alerts on malicious websites identified in browser history.
+                                        Maintained and troubleshot multi-application infrastructure, independently detected and resolved SEV1 outages, and built operational tooling to improve reliability and response times.
+                                        Also delivered projects spanning customer reporting, SIEM automation, compliance-focused log retention and tracking, authentication hardening, log ingestion reliability, and security platforms including VMS, EDR, and phishing detection.
                                     </p>
                                 </div>
                                 <div>
@@ -236,12 +227,8 @@ export default function App() {
                                         <p className='font-semibold'>March 2022 - November 2023</p>
                                     </div>
                                     <p className='ml-6'>
-                                        In this role, I integrated <b>Git</b>, <b>Jenkins</b>, <b>Terraform</b>, <b>AWS</b>, <b>Docker</b>, and <b>Kubernetes</b> into a unified delivery environment, <u>automating infrastructure provisioning, application packaging, and rolling deployments across Linux-based systems</u>.
-                                        I also supported deployment and management of a lightweight, scalable training platform using <b>EC2</b>, <b>Auto Scaling Groups</b>, and <b>Application Load Balancers</b> to ensure reliable user access and application availability.
-                                        I further assisted in deployment and management of a microservice-based AI image analysis platform that continuously ingested uploaded photos and used AI APIs to generate tags and classifications.
-                                        To improve delivery speed and consistency, I configured <b>Jenkins</b> pipelines to drive CI/CD automation and implemented <b>Terraform</b> with <b>AWS</b> to provision and manage infrastructure as code, enabling <u>consistent, repeatable, and scalable cloud deployments</u>.
-                                        I also supported <b>Kubernetes</b>-based application delivery and monitoring workflows using <b>Helm</b>, <b>Argo CD</b>, <b>Prometheus</b>, and <b>Grafana</b>.
-                                        Finally, I investigated and resolved infrastructure and application issues across <u>Linux, networking, databases, containers, and Kubernetes services</u> to support stable platform operations.
+                                        Integrated Git, Jenkins, Terraform, AWS, Docker, and Kubernetes into a unified delivery environment to automate cloud provisioning and application deployment, while supporting both a scalable training platform and a microservice-based AI image analysis platform. 
+                                        Also implemented CI/CD, infrastructure as code, Kubernetes delivery and monitoring workflows, and resolved infrastructure issues across Linux, networking, databases, containers, and Kubernetes services.
                                     </p>
                                 </div>
 
@@ -363,7 +350,7 @@ export default function App() {
                                     </div>
                                     <h1 className="pb-2 text-xl w-full font-bold relative w-max">DevOps<br />Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
-                                        {['Terraform', 'Ansible', 'Prometheus', 'Grafana', 'Linux CLI', 'Nginx'].map(skill =>
+                                        {['Terraform', 'Ansible', 'Prometheus', 'Grafana', 'Nginx', 'Apache'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
