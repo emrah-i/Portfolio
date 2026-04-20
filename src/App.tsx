@@ -210,45 +210,40 @@ export default function App() {
                                     </div>
                                     <div className='w-full flex justify-between'>
                                         <p className='font-semibold text-xl italic ml-6 mb-1'>Full-Stack Developer / DevOps Engineer</p>
-                                        <p className='font-semibold'>March 2024 - April 2025</p>
-                                    </div>
-                                    <div className='w-full flex justify-between'>
-                                        <p className='font-semibold text-xl italic ml-6 mb-1'>Junior Full-Stack Developer</p>
-                                        <p className='font-semibold'>November 2023 - March 2024</p>
+                                        <p className='font-semibold'>November 2023 - April 2025</p>
                                     </div>
                                     <p className='ml-6'>
                                         In this role, I maintained and troubleshot company infrastructure—including servers and datastores—across multiple applications to ensure reliable operations.
                                         I also built and operated a reporting platform that <u>delivered thousands of dynamic, customer-specific reports to end customers</u>.
                                         To improve operational scale, I implemented <b>Ansible</b> to roll out updates across hundreds of cloud SIEM devices and rebuilt the cron orchestration server, <u>reducing job failures from 2-3 per week to zero</u>.
-                                        I further implemented a long-term log retention solution for end customers to meet compliance requirements using <b>AWS S3</b> and <b>IAM</b>, 
-                                        rebuilt authentication with 2FA and self-service password reset to reduce support tickets and strengthen account security, 
+                                        I further implemented a long-term log retention solution for end customers to meet compliance requirements using <b>AWS S3</b> and <b>IAM</b>,
+                                        rebuilt authentication with 2FA and self-service password reset to reduce support tickets and strengthen account security,
                                         and assisted in implementing a <u>compliance tracker system for CMMC and SCF</u>, enabling more efficient tracking of controls, evidence, and compliance status.
                                         I detected and resolved SEV1 outages across SIEM and cloud SIEM platforms, ensuring rapid incident response and minimal service disruption, and developed monitoring tools to improve outage detection and response times.
-                                        I also assisted with integrating <b>GitHub Actions</b> into the CI/CD pipeline, 
-                                        deployed and supported core services such as <b>Nginx</b>, <b>Apache</b>, and <b>MariaDB</b>, and 
-                                        updated and maintained SIEM log ingestion, increasing reporting data reliability to <u>~100%</u>.
+                                        I also assisted updated and maintained SIEM log ingestion, increasing reporting data reliability to <u>~100%</u>.
                                         In support of new security capabilities, I assisted in developing a vulnerability management service (VMS) that scans customer networks and delivers actionable findings, as well as an endpoint detection and response (EDR) service that manages data for <u>10,000+ endpoints</u>.
                                         I also conducted technical interviews and evaluated candidates for engineering roles.
                                         Finally, I built a phishing detection server that alerts on malicious websites identified in browser history.
                                     </p>
                                 </div>
-                                {/* <div>
+                                <div>
                                     <div className='w-full flex justify-between'>
-                                        <p className='font-semibold text-xl italic ml-6 mb-1'>DevOps / Cloud Engineer, <span className='not-italic'>NCR Corporation - WinTech</span></p>
+                                        <p className='font-semibold text-xl ml-6 mb-1'>NCR Corporation - WinTech</p>
+                                        <p className='font-semibold'>Remote</p>
+                                    </div>
+                                    <div className='w-full flex justify-between'>
+                                        <p className='font-semibold text-xl italic ml-6 mb-1'>DevOps / Cloud Engineer</p>
                                         <p className='font-semibold'>March 2022 - November 2023</p>
                                     </div>
                                     <p className='ml-6'>
                                         In this role, I integrated <b>Git</b>, <b>Jenkins</b>, <b>Terraform</b>, <b>AWS</b>, <b>Docker</b>, and <b>Kubernetes</b> into a unified delivery environment, <u>automating infrastructure provisioning, application packaging, and rolling deployments across Linux-based systems</u>.
-                                        I configured <b>Jenkins</b> pipelines to drive CI/CD automation and streamline build and deployment workflows.
-                                        I implemented and managed <b>Terraform</b> with <b>AWS</b> to provision, maintain, and troubleshoot infrastructure as code for <u>consistent and scalable cloud deployments</u>.
-                                        I orchestrated workloads in <b>Kubernetes</b> using deployments, rolling updates, and persistent storage to support resilient application operations.
-                                        I containerized and deployed applications with <b>Docker</b> using Dockerfiles, Compose, and runtime troubleshooting across environments.
-                                        I assisted in <u>architecting technical solutions for new projects</u> based on platform and application requirements.
-                                        I built and administered Linux infrastructure, including user provisioning, permissions control, SSH configuration, and infrastructure troubleshooting.
-                                        I supported <b>Git</b>-based development workflows through repository management, pull requests, feature branching, and merge conflict resolution.
-                                        I investigated and resolved infrastructure and application issues across <u>Linux, networking, databases, containers, and Kubernetes services</u>.
+                                        I also supported deployment and management of a lightweight, scalable training platform using <b>EC2</b>, <b>Auto Scaling Groups</b>, and <b>Application Load Balancers</b> to ensure reliable user access and application availability.
+                                        I further assisted in deployment and management of a microservice-based AI image analysis platform that continuously ingested uploaded photos and used AI APIs to generate tags and classifications.
+                                        To improve delivery speed and consistency, I configured <b>Jenkins</b> pipelines to drive CI/CD automation and implemented <b>Terraform</b> with <b>AWS</b> to provision and manage infrastructure as code, enabling <u>consistent, repeatable, and scalable cloud deployments</u>.
+                                        I also supported <b>Kubernetes</b>-based application delivery and monitoring workflows using <b>Helm</b>, <b>Argo CD</b>, <b>Prometheus</b>, and <b>Grafana</b>.
+                                        Finally, I investigated and resolved infrastructure and application issues across <u>Linux, networking, databases, containers, and Kubernetes services</u> to support stable platform operations.
                                     </p>
-                                </div> */}
+                                </div>
 
                             </div>
                         </div>
@@ -355,7 +350,7 @@ export default function App() {
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-7 pb-7.5 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-solid fa-cloud"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Cloud<br/>Providers</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Cloud<br />Providers</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['AWS'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
@@ -366,9 +361,9 @@ export default function App() {
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-solid fa-screwdriver-wrench"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">DevOps<br/>Tools</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">DevOps<br />Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
-                                        {['Terraform', 'Ansible',  'Prometheus', 'Grafana', 'Linux CLI', 'Nginx'].map(skill =>
+                                        {['Terraform', 'Ansible', 'Prometheus', 'Grafana', 'Linux CLI', 'Nginx'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
                                         )}
                                     </div>
@@ -377,7 +372,7 @@ export default function App() {
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-brands fa-docker"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Containers &<br/>Orchestration</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Containers &<br />Orchestration</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['Kubernetes', 'Docker', 'Helm'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
@@ -388,7 +383,7 @@ export default function App() {
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-solid fa-infinity"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">CI/CD<br/>Tools</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">CI/CD<br />Tools</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['Jenkins', 'Argo CD', 'GitHub Actions'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
@@ -399,7 +394,7 @@ export default function App() {
                                     <div className="aspect-square h-20 w-20 flex items-center justify-center bg-[#ecf0f1] rounded-full p-6 transition-all duration-250 ease-in-out hover:scale-[1.05]">
                                         <i className="text-[#1d3657] text-3xl fa-solid fa-code"></i>
                                     </div>
-                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Programming<br/>Languages</h1>
+                                    <h1 className="pb-2 text-xl w-full font-bold relative w-max">Programming<br />Languages</h1>
                                     <div className='flex flex-col gap-y-2'>
                                         {['TypeScript', 'JavaScript', 'Python', 'PHP', 'Rust'].map(skill =>
                                             <p key={skill} className="text-lg font-normal transition-all duration-250 ease-in-out hover:scale-110">{skill}</p>
