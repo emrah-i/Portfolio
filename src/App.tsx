@@ -1,12 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
 import profile from "./assets/profile.jpg"
-import aws from "./assets/aws.png"
 import aws_white from "./assets/aws-white.png"
-import hashicorp from "./assets/hashicorp.png"
 import hashicorp_white from "./assets/hashicorp-white.png"
 import z from 'zod';
 
-const api_url = "https://emrakh.com/v1/metric"
+const api_url = "https://emrahibrahim.com/v1/metric"
 
 const endpoints = {
     page_views: "?metric_name=page_views",
@@ -112,7 +110,7 @@ export default function App() {
                             <p>
                                 E
                                 <span className="inline-block max-w-0 group-hover:max-w-full align-bottom overflow-hidden whitespace-nowrap duration-200 ease-in-out">
-                                    mrakh
+                                    mrah
                                 </span>&nbsp;I
                             </p>
                         </p>
