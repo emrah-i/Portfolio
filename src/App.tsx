@@ -263,7 +263,7 @@ export default function App() {
                                         <p>Credential ID: 3147146e-5e57-4fce-a29c-388b0658098e</p>
                                         <a
                                             target='_blank'
-                                            href='https://www.credly.com/earner/earned/badge/3147146e-5e57-4fce-a29c-388b0658098e'
+                                            href='https://www.credly.com/badges/3147146e-5e57-4fce-a29c-388b0658098e/public_url'
                                             onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
                                             className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                         >
@@ -279,7 +279,7 @@ export default function App() {
                                         <p>Credential ID: a37d5bdd-e276-48a1-ba80-ab1334d459dc</p>
                                         <a
                                             target='_blank'
-                                            href='https://www.credly.com/earner/earned/badge/a37d5bdd-e276-48a1-ba80-ab1334d459dc'
+                                            href='https://www.credly.com/badges/a37d5bdd-e276-48a1-ba80-ab1334d459dc/public_url'
                                             onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
                                             className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                         >
