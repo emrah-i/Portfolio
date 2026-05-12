@@ -1,7 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import profile from "./assets/profile.jpg"
-import aws_white from "./assets/aws-white.png"
-import hashicorp_white from "./assets/hashicorp-white.png"
+import solutions from "./assets/Solutions.png"
+import sysops from "./assets/Sysops.png"
+import terraform from "./assets/Terraform.png"
+import security from "./assets/Security.png"
 import z from 'zod';
 
 const api_url = "https://emrahibrahim.com/v1/metric"
@@ -237,54 +239,75 @@ export default function App() {
                         <div className="bg-[#1d3657] text-[#ecf0f1] p-6 pt-4 text-lg font-normal">
                             <h1 className="text-4xl font-bold w-max mb-4">Certificates</h1>
                             <div className="flex justify-between flex-wrap gap-8 py-2">
-                                <div className='w-fit flex items-center gap-x-6'>
-                                    <div className="flex justify-center items-center min-w-20 max-w-20"><img src={aws_white} className="w-16" /></div>
-                                    <div className='flex flex-col justify-start gap-y-0.5'>
-                                        <p className='text-lg font-bold'>AWS Solutions Architect - Associate (SAA-C03)</p>
-                                        <p>Issued Jul 2025 · Expires Jul 2028</p>
-                                        <p>Credential ID: 2a57772d-c2c9-43fa-a394-fb6e92b68e2c</p>
-                                        <a
-                                            target='_blank'
-                                            href='https://www.credly.com/badges/2a57772d-c2c9-43fa-a394-fb6e92b68e2c/public_url'
-                                            onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
-                                            className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
-                                        >
-                                            Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
-                                        </a>
+                                <div className='w-full flex gap-x-6'>
+                                    <div className='flex-1 flex items-center gap-x-6'>
+                                        <div className="w-1/3 flex justify-center items-center min-w-32 max-w-32"><img src={solutions} className="w-48" /></div>
+                                        <div className='w-2/3 flex flex-col justify-start gap-y-0.5'>
+                                            <p className='text-lg font-bold'>AWS Solutions Architect - Associate (SAA-C03)</p>
+                                            <p>Issued Jul 2025 · Expires Jul 2028</p>
+                                            <p>Credential ID: 2a57772d-c2c9-43fa-a394-fb6e92b68e2c</p>
+                                            <a
+                                                target='_blank'
+                                                href='https://www.credly.com/badges/2a57772d-c2c9-43fa-a394-fb6e92b68e2c/public_url'
+                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
+                                                className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
+                                            >
+                                                Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </div>
                                     </div>
+                                    <div className='flex-1 flex items-center gap-x-6'>
+                                        <div className="w-1/3 w-full flex justify-center items-center min-w-32 max-w-32"><img src={sysops} className="w-48" /></div>
+                                        <div className='w-2/3 flex flex-col justify-start gap-y-0.5'>
+                                            <p className='text-lg font-bold'>AWS SysOps Administrator - Associate (SOA-C02)</p>
+                                            <p>Issued Aug 2025 · Expires Aug 2028</p>
+                                            <p>Credential ID: 3147146e-5e57-4fce-a29c-388b0658098e</p>
+                                            <a
+                                                target='_blank'
+                                                href='https://www.credly.com/badges/3147146e-5e57-4fce-a29c-388b0658098e/public_url'
+                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
+                                                className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
+                                            >
+                                                Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </div>
+                                    </div>                                    
                                 </div>
-                                <div className='w-fit flex items-center gap-x-6'>
-                                    <div className="flex justify-center items-center min-w-20 max-w-20"><img src={aws_white} className="w-16" /></div>
-                                    <div className='flex flex-col justify-start gap-y-0.5'>
-                                        <p className='text-lg font-bold'>AWS SysOps Administrator - Associate (SOA-C02)</p>
-                                        <p>Issued Aug 2025 · Expires Aug 2028</p>
-                                        <p>Credential ID: 3147146e-5e57-4fce-a29c-388b0658098e</p>
-                                        <a
-                                            target='_blank'
-                                            href='https://www.credly.com/badges/3147146e-5e57-4fce-a29c-388b0658098e/public_url'
-                                            onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
-                                            className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
-                                        >
-                                            Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
-                                        </a>
+                                <div className='w-full flex gap-x-6'>
+                                    <div className='flex-1 flex items-center gap-x-6'>
+                                        <div className="w-1/3 flex justify-center items-center min-w-32 max-w-32"><img src={security} className="w-full" /></div>
+                                        <div className='w-2/3 flex flex-col justify-start gap-y-0.5'>
+                                            <p className='text-lg font-bold'>CompTIA Security+</p>
+                                            <p>Issued May 2026 · Expires May 2029</p>
+                                            <p>Credential ID: e05cd198-b08e-47de-aa19-29d967b427bf</p>
+                                            <a
+                                                target='_blank'
+                                                href='https://www.credly.com/badges/e05cd198-b08e-47de-aa19-29d967b427bf/public_url'
+                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
+                                                className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
+                                            >
+                                                Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </div>
                                     </div>
+                                    <div className='flex-1 flex items-center gap-x-6'>
+                                        <div className="w-1/3 flex justify-center items-center min-w-32 max-w-32"><img src={terraform} className='w-64' /></div>
+                                        <div className='w-2/3 flex flex-col justify-start gap-y-0.5'>
+                                            <p className='text-lg font-bold'>Terraform Associate (003)</p>
+                                            <p>Issued Sep 2025 · Expires Sep 2027</p>
+                                            <p>Credential ID: a37d5bdd-e276-48a1-ba80-ab1334d459dc</p>
+                                            <a
+                                                target='_blank'
+                                                href='https://www.credly.com/badges/a37d5bdd-e276-48a1-ba80-ab1334d459dc/public_url'
+                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
+                                                className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
+                                            >
+                                                Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
+                                            </a>
+                                        </div>
+                                    </div>                                    
                                 </div>
-                                <div className='w-fit flex items-center gap-x-6'>
-                                    <div className="flex justify-center items-center min-w-20 max-w-20"><img src={hashicorp_white} className='w-12' /></div>
-                                    <div className='flex flex-col justify-start gap-y-0.5'>
-                                        <p className='text-lg font-bold'>Terraform Associate (003)</p>
-                                        <p>Issued Sep 2025 · Expires Sep 2027</p>
-                                        <p>Credential ID: a37d5bdd-e276-48a1-ba80-ab1334d459dc</p>
-                                        <a
-                                            target='_blank'
-                                            href='https://www.credly.com/badges/a37d5bdd-e276-48a1-ba80-ab1334d459dc/public_url'
-                                            onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
-                                            className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
-                                        >
-                                            Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
-                                        </a>
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
