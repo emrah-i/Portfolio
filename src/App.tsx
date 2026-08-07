@@ -222,7 +222,7 @@ export default function App() {
                                     </div>
                                     <div className='w-full flex justify-between'>
                                         <p className='font-semibold text-xl italic ml-6 mb-1'>DevOps / Cloud Engineer</p>
-                                        <p className='font-semibold'>March 2022 - November 2023</p>
+                                        <p className='font-semibold'>March 2021 - November 2023</p>
                                     </div>
                                     <p className='ml-6'>
                                         Integrated Git, Jenkins, Terraform, AWS, Docker, and Kubernetes into a unified delivery environment to automate cloud provisioning and application deployment, while supporting both a scalable training platform and a microservice-based AI image analysis platform. 
