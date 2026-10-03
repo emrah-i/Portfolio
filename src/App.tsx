@@ -1,107 +1,14 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import profile from "./assets/profile.jpg"
 import solutions from "./assets/Solutions.png"
 import sysops from "./assets/Sysops.png"
 import terraform from "./assets/Terraform.png"
 import security from "./assets/Security.png"
-import z from 'zod';
-
-const api_url = "https://emrahibrahim.com/v1/metric"
-
-const endpoints = {
-    page_views: "?metric_name=page_views",
-    email_clicks: "?metric_name=email_clicks",
-    github_redirects: "?metric_name=github_redirects",
-    resume_downloads: "?metric_name=resume_downloads",
-    linkedin_redirects: "?metric_name=linkedin_redirects",
-    cert_redirects: "?metric_name=cert_redirects"
-}
-
-const endpoint_keys = Object.keys(endpoints) as (keyof typeof endpoints)[];
-
-const metricsSchema = z.array(z.object({
-    metric_name: z.enum(endpoint_keys),
-    count_total: z.number()
-}))
-
 export default function App() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    const [pageViews, setPageViews] = useState<number>()
-    const [emailClicks, setEmailClicks] = useState<number>()
-    const [linkedinRedirects, setLinkedinRedirects] = useState<number>()
-    const [resumeDownloads, setResumeDownloads] = useState<number>()
-    const [certRedirects, setCertRedirects] = useState<number>()
-
     const about = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        startUp()
-    }, [])
-
-    async function startUp() {
-        await handlePutRequest("page_views")
-        await handleGetRequest()
-    }
-
-    async function handleGetRequest() {
-        const data = await fetch(api_url, { method: "GET" })
-        const json = await data.json()
-
-        const parsed = metricsSchema.safeParse(json)
-
-        if (!parsed.success) return
-
-        for (const item of parsed.data) {
-            switch (item.metric_name) {
-                case "page_views":
-                    setPageViews(item.count_total)
-                    break
-                case "email_clicks":
-                    setEmailClicks(item.count_total)
-                    break
-                case "resume_downloads":
-                    setResumeDownloads(item.count_total)
-                    break
-                case "linkedin_redirects":
-                    setLinkedinRedirects(item.count_total)
-                    break
-                case "cert_redirects":
-                    setCertRedirects(item.count_total)
-                    break
-            }
-        }
-    }
-
-    async function handlePutRequest(type: keyof typeof endpoints) {
-        await fetch(api_url + endpoints[type], { method: "PUT" })
-    }
-
-    const all_metrics: { title: string, metric?: number }[] = [
-        {
-            title: "Page\nViews",
-            metric: pageViews
-        },
-        // {
-        //     title: "Email\nClicks",
-        //     metric: emailClicks
-        // },
-        // {
-        //     title: "Resume\nDownloads",
-        //     metric: resumeDownloads
-        // },
-        // {
-        //     title: "LinkedIn\nRedirects",
-        //     metric: linkedinRedirects
-        // },
-        // {
-        //     title: "Credly\nRedirects",
-        //     metric: certRedirects
-        // },
-    ]
-
     return (
-        <div className={`w-screen ${isDarkMode ? 'dark' : ''}`}>
+        <div className="w-screen">
             <nav className="fixed w-full top-0 left-1/2 -translate-x-1/2 z-[999] bg-[#ecf0f1] py-2 shadow-xl">
                 <div className="container mx-auto flex justify-between items-center px-4">
                     <div className='w-full'>
@@ -144,17 +51,8 @@ export default function App() {
                                 <span>Full Stack Developer</span>
                             </div>
                             <div className="flex flex-wrap justify-start gap-4 mt-4 h-11 md:h-13">
-                                {/* <a 
-                                    href='https://github.com/emrah-i'
-                                    onClick={()=>{handlePutRequest("github_redirects"); githubRedirects !== undefined && setGithubRedirects(prev=>prev! + 1)}}
-                                    target="_blank"
-                                    className="h-full flex items-center px-3 bg-[#1d3657] text-[#ecf0f1] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-250 cursor-pointer"
-                                >
-                                    <i className="text-2xl md:text-3xl fa-brands fa-github"></i>
-                                </a> */}
                                 <a
                                     href='https://www.linkedin.com/in/emrah-ibrahim/'
-                                    onClick={() => { handlePutRequest("linkedin_redirects"); linkedinRedirects !== undefined && setLinkedinRedirects(prev => prev! + 1) }}
                                     target="_blank"
                                     className="h-full flex items-center px-3 bg-[#1d3657] text-[#ecf0f1] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-150 cursor-pointer"
                                 >
@@ -162,15 +60,9 @@ export default function App() {
                                 </a>
                                 <a
                                     href='mailto:ibraem1026@gmail.com'
-                                    onClick={() => { handlePutRequest("email_clicks"); emailClicks !== undefined && setEmailClicks(prev => prev! + 1) }}
                                     className="h-full flex items-center px-3 bg-[#1d3657] text-[#ecf0f1] rounded-lg hover:rounded-xl hover:scale-[1.1] duration-150 cursor-pointer"
                                 >
                                     <i className="text-2xl md:text-3xl fa-solid fa-envelope"></i>
-                                </a>
-                                <a
-                                    className="h-full flex items-center text-xl md:text-2xl flex items-center font-bold px-5 pb-0.5 bg-[#1d3657] text-[#ecf0f1] rounded-lg"
-                                >
-                                    {pageViews !== undefined ? pageViews : <i className="text-2xl fa-solid fa-spinner animate-spin mr-3"></i>} Page Views
                                 </a>
                             </div>
                         </div>
@@ -249,7 +141,6 @@ export default function App() {
                                             <a
                                                 target='_blank'
                                                 href='https://www.credly.com/badges/2a57772d-c2c9-43fa-a394-fb6e92b68e2c/public_url'
-                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
                                                 className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                             >
                                                 Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
@@ -265,7 +156,6 @@ export default function App() {
                                             <a
                                                 target='_blank'
                                                 href='https://www.credly.com/badges/3147146e-5e57-4fce-a29c-388b0658098e/public_url'
-                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
                                                 className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                             >
                                                 Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
@@ -283,7 +173,6 @@ export default function App() {
                                             <a
                                                 target='_blank'
                                                 href='https://www.credly.com/badges/e05cd198-b08e-47de-aa19-29d967b427bf/public_url'
-                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
                                                 className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                             >
                                                 Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
@@ -299,7 +188,6 @@ export default function App() {
                                             <a
                                                 target='_blank'
                                                 href='https://www.credly.com/badges/a37d5bdd-e276-48a1-ba80-ab1334d459dc/public_url'
-                                                onClick={() => { handlePutRequest("cert_redirects"); certRedirects !== undefined && setCertRedirects(prev => prev! + 1) }}
                                                 className='text-base flex gap-x-2 items-center px-2.5 py-1.5 mt-1 bg-[#ecf0f1] text-[#1d3657] rounded-lg hover:rounded-xl hover:scale-[1.05] duration-250 cursor-pointer w-fit'
                                             >
                                                 Show Credential <i className="text-sm fa-solid fa-arrow-up-right-from-square"></i>
@@ -428,4 +316,3 @@ export default function App() {
         </div>
     );
 }
-
