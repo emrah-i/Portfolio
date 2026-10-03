@@ -10,7 +10,7 @@ Portfolio: [https://emrakh.com](https:/emrakh.com)
 
 Detailed Blog Post About Website: [https://medium.com/@ibraem1026](https://medium.com/@ibraem1026/my-journey-deploying-my-portfolio-to-the-cloud-b6361122b87d)
 
-### Used Technology
+### Technology Used
 
 * Terraform
 * Terraform Cloud (HCP)
